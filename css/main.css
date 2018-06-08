@@ -219,26 +219,11 @@ footer a:hover {
   .top-nav .icon-menu {
     display: block;
   }
-  .top-nav_menu {
+  .header_link {
     position: absolute;
-    right: -1px;
-    margin-right: 15px;
-    display: none;
-    list-style: none;
-    top: -10px;
-  }
-  .top-nav_menu a {
-    text-decoration: none;
-    color: #191919;
-    outline: none;
-    font-size: 12px;
-  }
-  .top-nav_menu a:hover {
-    text-decoration: none;
-    color: #191919;
-  }
-  .top-nav_menu li {
-    padding-right: 5px;
+    right: 0;
+    margin-right: 20px;
+    top: -20px;
   }
   .about .photobox {
     display: none;
