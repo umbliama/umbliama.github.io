@@ -1,0 +1,282 @@
+@import url(bar.css);
+@import url(fontello.css);
+@font-face {
+  font-family: "TitiliumWeb";
+  src: url("/fonts/TitilliumWebRegular.ttf"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: TitiliumWeb; }
+  body h2 {
+    margin-bottom: 50px; }
+
+.test {
+  text-align: center; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+hr {
+  height: 4px;
+  width: 87px;
+  margin: 0 50% 0 45%;
+  background-color: #000000;
+  opacity: 0.15;
+  margin-bottom: 24px; }
+
+.icon-menu {
+  display: none; }
+
+.header {
+  position: relative;
+  background-color: #87509c;
+  padding-top: 50px;
+  padding-bottom: 170px; }
+  .header a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px; }
+  .header__menu__item {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase; }
+    .header__menu__item:hover {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      text-decoration: none; }
+  .header__text {
+    margin-top: 150px;
+    color: #fff;
+    text-align: center; }
+  .header__btn-work {
+    text-align: center;
+    display: block;
+    background-color: #eb7d4b;
+    margin-right: -6rem;
+    text-align: center;
+    position: absolute;
+    border: none;
+    border-bottom: 1px solid #eb7d4b;
+    right: 45%;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    margin-top: 4rem; }
+
+.services {
+  background-color: #17c2a4;
+  padding-top: 120px;
+  text-align: center;
+  padding-bottom: 128px; }
+  .services__header {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center; }
+  .services__header3 {
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 62px; }
+  .services__header4 {
+    color: #fff;
+    text-align: center;
+    font-size: 18px; }
+  .services__paragraph {
+    color: #fff; }
+  .services__img {
+    margin-left: 15px;
+    margin-top: 80px;
+    text-align: center; }
+
+.team {
+  background-color: #e7f1f8;
+  padding-top: 120px;
+  text-align: center;
+  padding-bottom: 130px; }
+  .team__heading {
+    text-transform: uppercase;
+    font-size: 41px;
+    letter-spacing: 4px;
+    text-align: center; }
+  .team_img_links {
+    padding: 0 12px;
+    text-align: center; }
+  .team__face {
+    margin-top: 80px;
+    margin-left: 30px; }
+  .team__header4 {
+    text-align: center; }
+  .team__span {
+    color: #30bae7;
+    letter-spacing: 0.32px;
+    font-size: 16px;
+    text-align: center; }
+  .team__header3 {
+    margin-top: 45px;
+    color: #3c4761;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.48;
+    text-transform: uppercase; }
+  .team__paragraph {
+    color: #3c4761;
+    text-align: center; }
+
+.skills {
+  max-width: 100%;
+  padding-top: 120px;
+  padding-bottom: 172px; }
+  .skills__header2 {
+    text-align: center;
+    text-transform: uppercase; }
+  .skills__header4 {
+    color: #3c4761;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 85px; }
+  .skills__header3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-left: -5rem;
+    font-weight: 700; }
+
+.portfolio {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 310px;
+  background-color: #ffdd99; }
+  .portfolio__heading {
+    text-transform: uppercase;
+    text-align: center; }
+  .portfolio__header4 {
+    text-align: center; }
+  .portfolio__menu {
+    text-align: center; }
+    .portfolio__menu__toggler {
+      margin-top: 42px;
+      display: inline-block;
+      opacity: 0.3;
+      padding: 0 10px;
+      margin-right: 10px;
+      background-color: #222;
+      text-transform: uppercase;
+      color: #000;
+      text-align: center; }
+      .portfolio__menu__toggler:active {
+        background-color: #fff;
+        opacity: 1;
+        text-decoration: none;
+        color: #000; }
+  .portfolio__note {
+    margin-top: 62px;
+    padding-bottom: 32px; }
+  .portfolio__button-load {
+    text-align: center;
+    position: absolute;
+    display: block;
+    background-color: #17c2a4;
+    margin-right: -6rem;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #17c2a4;
+    right: 45%;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    margin-top: 128px; }
+
+.about {
+  background-color: #d74680; }
+  .about__header4 {
+    text-align: center;
+    color: #fff; }
+  .about__heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff; }
+  .about__comment {
+    color: #fff; }
+    .about__comment_face {
+      margin-top: 71px; }
+
+.footer {
+  padding-top: 120px;
+  background-color: #3c5499; }
+  .footer__heading {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center; }
+    .footer__heading a {
+      color: #fff; }
+      .footer__heading a:hover {
+        color: #fff; }
+  .footer address {
+    text-align: center;
+    color: #fff; }
+  .footer form {
+    text-align: center;
+    margin-top: 76px; }
+  .footer__submit {
+    background-color: #30bae7;
+    border-radius: 3px;
+    padding: 10px 45px;
+    color: #fff;
+    border: none; }
+  .footer__input {
+    background-color: #273a71;
+    border-radius: 3px;
+    border: 1px solid #273a71;
+    color: #fff; }
+  .footer textarea {
+    max-width: 90% !important; }
+
+@media only screen and (max-width: 480px) {
+  .skills {
+    display: none; }
+  hr {
+    margin: 0 50% 0 39%; }
+  .header__menu__item {
+    display: none;
+    font-size: 10px; }
+    .header__menu__item:hover {
+      color: none;
+      background-color: none; }
+  .header__menu__item-active {
+    display: block;
+    margin-left: 13rem; }
+  .header .icon-menu {
+    display: block;
+    position: absolute;
+    right: 16%;
+    top: 0; }
+  .header .team {
+    text-align: center; }
+    .header .team__face {
+      margin-right: 7%; }
+  .header .portfolio__button-load {
+    margin-right: -6rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .header__menu__item {
+    display: none; }
+  .header__menu__item-active {
+    display: block;
+    margin-left: 33rem; }
+  .header .icon-menu {
+    display: block;
+    position: absolute;
+    right: 16%;
+    top: 0;
+    margin-top: 1rem; }
+  .skills__header3 {
+    margin-left: -1rem; }
+  .portfolio {
+    text-align: center; } }

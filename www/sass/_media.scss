@@ -1,0 +1,85 @@
+@media only screen and (max-width:480px){
+    .skills{
+        display: none;
+    }
+
+    hr{
+        margin: 0 50% 0 39%;
+    }
+
+    .header{
+        &__menu{
+            &__item{
+                display: none;
+                font-size: 10px;    
+                &:hover{
+                    color: none;
+                    background-color: none;
+                }
+            } 
+            &__item-active{
+                display: block;
+                margin-left: 13rem;
+            }
+        }
+
+        .icon-menu{
+            display: block;
+            position: absolute;
+            right:16%;
+            top: 0;
+
+        }
+
+
+    .team{
+        text-align: center;
+
+        &__face{
+           margin-right: 7%;
+        } 
+    }
+
+
+        .portfolio{
+
+
+         &__button-load{
+             margin-right: -6rem;
+            }
+        }
+    }
+}
+@media only screen and (min-width:768px) and(max-width:1000px){
+
+    .header{
+
+        &__menu{
+
+            
+            &__item{
+                display: none;
+            }
+            &__item-active{
+                display: block;
+                margin-left: 33rem;
+            }
+        }
+        .icon-menu{
+            display: block;
+            position: absolute;
+            right: 16%;
+            top:0;
+            margin-top: 1rem;
+        }
+    }
+    .skills{
+        &__header3{
+            margin-left: -1rem;   
+        }
+    }
+    .portfolio{
+        text-align: center;
+    }
+
+}
