@@ -243,15 +243,21 @@ hr {
     display: none; }
   hr {
     margin: 0 50% 0 39%; }
+    .header__menu{
+      position: relative;
+    }
   .header__menu__item {
-    display: none;
+    display: none;  
     font-size: 10px; }
     .header__menu__item:hover {
-      color: none;
-      background-color: none; }
+      color: transparent;
+      background-color: transparent; }
   .header__menu__item-active {
-    display: block;
-    margin-left: 13rem; }
+      display: inline-block;
+      padding: 0;
+      margin-left: -1rem;
+
+     }
   .header .icon-menu {
     display: block;
     position: absolute;
