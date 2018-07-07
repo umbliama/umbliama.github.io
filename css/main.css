@@ -220,7 +220,8 @@ footer a:hover {
     display: block;
   }
   .header_link {
-    position: absolute;
+    position: relative;
+    float: right;
     right: 0;
     margin-right: 20px;
     top: -20px;
