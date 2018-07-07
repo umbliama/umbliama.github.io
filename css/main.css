@@ -223,6 +223,7 @@ footer a:hover {
     position: relative;
     float: right;
     right: 0;
+    margin-top: 0%; 
     margin-right: 20px;
     top: -20px;
   }
@@ -265,6 +266,14 @@ footer a:hover {
 }
 
 @media (min-width: 480px) {
+  .header_link {
+    margin-top: 1rem;
+    position: relative;
+    float: right;
+    right: 0;
+    margin-right: 20px;
+    top: -20px;
+  }
   .intro {
     text-align: center;
   }
@@ -287,5 +296,8 @@ footer a:hover {
   }
   .icon-menu {
     display: none;
+  }
+  .header_menu{
+    margin-top: 10px; 
   }
 }
