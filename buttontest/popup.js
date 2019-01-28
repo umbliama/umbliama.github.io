@@ -1,8 +1,9 @@
 function main() {
-  let btn = document.querySelector(".checkPage");
-  btn.addEventListener("mousemove", function() {
-    let audio = document.querySelector(".song");
-    audio.play();
-  });
+  let audio1 = document.querySelector(".song");
+  audio1.play();
 }
-main();
+
+let btn = document.querySelector(".checkPage");
+btn.addEventListener("mousemove", function() {
+  main();
+});
