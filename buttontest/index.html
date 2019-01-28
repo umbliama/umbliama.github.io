@@ -4,10 +4,36 @@
     <title>GTmetrix Analyzer</title>
   </head>
   <body>
-    <button onmouseover="PlaySound('mySound')" 
-    onmouseout="StopSound('mySound')">Hover Over Me To Play</button>
+    <nav>
+      <a href="#" onclick="playAudio()">HOME</a> |
+      <a href="#" onmouseenter="playAudio()">ABOUT</a> |
+      <a href="#" onmouseenter="playAudio()">RESUME</a> |
+      <a href="#" onmouseenter="playAudio()">CONTACT</a>
+    </nav>
 
-<audio id='mySound' src='http://upload.wikimedia.org/wikipedia/commons/6/6f/Cello_Live_Performance_John_Michel_Tchaikovsky_Violin_Concerto_3rd_MVT_applaused_cut.ogg'/>
-    <script src="script.js"></script>
+    <!-- Example of audio element -->
+
+    <audio id="audioID">
+      <source
+        src="http://iss240.net/tempfiles/menu-click/1.ogg"
+        type="audio/ogg"
+      />
+      <source
+        src="http://iss240.net/tempfiles/menu-click/1.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
   </body>
+  <script>
+    //Defining variable based on unique ID
+
+    var audio1 = document.getElementById("audioID");
+
+    //Example of an HTML Audio/Video Method
+
+    function playAudio() {
+      audio1.play();
+    }
+  </script>
 </html>
