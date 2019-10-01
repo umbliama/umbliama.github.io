@@ -1,0 +1,37 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #242b33;
+}
+.subtitle {
+  color: $white;
+}
+.request__btn {
+  padding: 12px 36px;
+  background: #d4c17f;
+  border: none;
+  color: $white;
+  display: block;
+  text-align: center;
+}
+.section__title {
+  @include font-play-fair-display;
+  color: #d4c17f;
+  font-size: 36px;
+  line-height: 48px;
+  @include sm {
+    text-align: center;
+  }
+  @include md {
+    text-align: center;
+  }
+}
+.request__input {
+  color: #bebebe;
+  background: rgba($white, 0.2);
+  border: none;
+  text-align: center;
+  padding: 12px 26px;
+}

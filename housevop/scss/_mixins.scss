@@ -1,0 +1,37 @@
+@mixin font-play-fair-display {
+  @font-face {
+    font-family: "PlayfairDisplay-Bold";
+    src: url("../fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+  }
+}
+@mixin inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}

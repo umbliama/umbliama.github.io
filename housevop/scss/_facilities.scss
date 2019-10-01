@@ -1,0 +1,45 @@
+.section-facilities {
+  padding: 200px 0 0 0;
+  @include lg {
+    padding: 0 0 0 0;
+  }
+  &-outer {
+  }
+  &-inner {
+    @include inner;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    @include sm {
+      flex-direction: column;
+    }
+    @include md {
+      flex-direction: column;
+    }
+    @include xl {
+      flex-direction: row;
+    }
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 130px 0 0;
+    @include sm {
+      padding: 0;
+    }
+    @include md {
+      padding: 0;
+    }
+    @include xl {
+      padding: 0 130px 0 0;
+    }
+    &:last-child {
+      padding: 0;
+    }
+    &__subtitle {
+      text-align: center;
+    }
+  }
+}

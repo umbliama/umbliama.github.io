@@ -1,0 +1,75 @@
+.section-footer {
+  background: $footerColor;
+  padding: 0 0 50px 0;
+  &-inner {
+    @include inner;
+  }
+  &-container {
+    display: flex;
+    padding: 60px 0 0 0;
+    @include sm {
+      flex-direction: column;
+    }
+  }
+  &-nav {
+    display: flex;
+    flex-wrap: wrap;
+    @include sm {
+      margin: 10px 0;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      @include sm {
+        padding: 5px 0;
+      }
+    }
+    &__list {
+      list-style-type: none;
+      padding: 0 160px 0 0;
+      margin: 0;
+      @include sm {
+        padding: 20px 0;
+      }
+    }
+    &__link {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  &-info {
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__paragraph {
+      color: $white;
+    }
+    &-address {
+      &__paragraph {
+        margin: 0;
+      }
+    }
+
+    &-social {
+      display: flex;
+      &__img {
+        padding: 0 24px 0 0;
+      }
+    }
+  }
+
+  &-logo {
+    padding: 0 160px 0 0;
+    @include sm {
+      padding: 0;
+      margin: 0 auto;
+    }
+    @include md {
+      padding: 0 100px 0 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.section-video {
+  &-inner {
+    @include inner;
+  }
+  &-container {
+    display: flex;
+    justify-content: center;
+  }
+}
