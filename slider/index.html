@@ -17,12 +17,20 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <style>
-      /* zero custom styles for photoswipe */
 
-      /*==================================
-                     SWIPER
-        ===================================*/
-      /* semantic HTML - remove bullet and space from the list */
+      .gallery-thumbs {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+      .gallery-thumbs .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+      .gallery-thumbs .swiper-slide-active {
+        opacity: 1;
+      }
       ul.swiper-wrapper {
         list-style-type: none;
         margin: 0;
@@ -85,10 +93,16 @@
       .swiper-button-next:hover {
         opacity: 1;
       }
+
+      @media (max-width: 320px) {
+        .swiper-container img {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="swiper-container">
+    <div class="swiper-container gallery-top">
       <ul
         class="swiper-wrapper my-gallery"
         itemscope
@@ -103,12 +117,12 @@
         >
           <a
             title="click to zoom-in"
-            href="https://picsum.photos/id/1079/1200/600"
+            href="https://s4.lm-cdn.ru/photo/stoly/dlya_kuhni/derevyannye/stol_vlinder_160_super_white/stol_vlinder_160_super_white_1200_676_1_1_1754424.jpg"
             itemprop="contentUrl"
             data-size="1200x600"
           >
             <img
-              src="https://picsum.photos/id/1079/1200/600"
+              src="https://s4.lm-cdn.ru/photo/stoly/dlya_kuhni/derevyannye/stol_vlinder_160_super_white/stol_vlinder_160_super_white_1200_676_1_1_1754424.jpg"
               itemprop="thumbnail"
               alt="Image description"
             />
@@ -199,6 +213,25 @@
       <div class="swiper-pagination"></div>
     </div>
 
+    <div class="swiper-container gallery-thumbs">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://s4.lm-cdn.ru/photo/stoly/dlya_kuhni/derevyannye/stol_vlinder_160_super_white/stol_vlinder_160_super_white_1200_676_1_1_1754424.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="http://placehold.it/1200x601/AB47BC/ffffff?text=картинка" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="http://placehold.it/1200x600/EF5350/ffffff?text=картинка3" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="http://placehold.it/1200x600/EF5350/ffffff?text=картинка3" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/id/1011/1200/600" alt="" />
+        </div>
+    </div>
+
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="pswp__bg"></div>
 
@@ -275,8 +308,32 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   </body>
   <script>
-    var mySwiper = new Swiper(".swiper-container", {});
+    function slideProductImg(e) {
+      let productThumbs = document.querySelectorAll(".js-productImgSmall");
 
+      for (let i = 0; i < productThumbs.length; i++) {
+        productThumbs[i].index = i;
+        productThumbs[i].addEventListener("click", e => {
+          let target = e.target;
+          galleryProduct[1].slideTo(target.index, 500);
+        });
+      }
+    }
+    var galleryTop = new Swiper(".gallery-top", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+    var galleryThumbs = new Swiper(".gallery-thumbs", {
+      spaceBetween: 10,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      slideToClickedSlide: true
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
     var initPhotoSwipeFromDOM = function(gallerySelector) {
       var parseThumbnailElements = function(el) {
         var thumbElements = el.childNodes,
