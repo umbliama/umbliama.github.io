@@ -365,7 +365,7 @@
         });
       }
     }
-    var galleryTop = new Swiper(".gallery-top", {
+    var mySwiper = new Swiper(".gallery-top", {
       spaceBetween: 10,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -378,8 +378,8 @@
       slidesPerView: "auto",
       slideToClickedSlide: true
     });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
+    mySwiper.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = mySwiper;
     var initPhotoSwipeFromDOM = function(gallerySelector) {
       var parseThumbnailElements = function(el) {
         var thumbElements = el.childNodes,
@@ -521,6 +521,7 @@
           counterEl: false,
           arrowEl: true,
           preloaderEl: true,
+          history:false,
           // define gallery index (for URL)
           galleryUID: galleryElement.getAttribute("data-pswp-uid"),
           getThumbBoundsFn: function(index) {
