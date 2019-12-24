@@ -9,17 +9,13 @@
 
     <link rel="stylesheet" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="slick/slick.css" />
-    <link rel="stylesheet" href="photoswipe/photoswipe.css" />
+    <link rel="stylesheet" href="./photoswipe/photoswipe.css" />
     <link rel="stylesheet" href="photoswipe/default-skin/default-skin.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-      <div
-        id="SlickPhotoswipGallery"
-        itemscope
-        itemtype="http://schema.org/ImageGallery"
-      >
+      <div id="gallery">
         <figure
           itemprop="associatedMedia"
           itemscope
@@ -28,7 +24,7 @@
           <a
             href="http://placehold.it/200x200?text=4"
             class="hover"
-            data-size="1024x1024"
+            data-size="200x200"
           >
             <img
               src="http://placehold.it/200x200?text=4"
@@ -46,7 +42,7 @@
           <a
             href="http://placehold.it/200x200?text=5"
             class="hover"
-            data-size="1024x1024"
+            data-size="200x200"
           >
             <img
               src="http://placehold.it/200x200?text=5"
@@ -64,7 +60,7 @@
           <a
             href="http://placehold.it/200x200?text=6"
             class="hover"
-            data-size="1024x1024"
+            data-size="200x200"
           >
             <img
               src="http://placehold.it/200x200?text=6"
@@ -87,7 +83,7 @@
           <a
             href="http://placehold.it/50x50?text=4"
             class="hover"
-            data-size="1024x1024"
+            data-size="200x200"
           >
             <img
               src="http://placehold.it/50x50?text=4"
@@ -105,7 +101,7 @@
           <a
             href="http://placehold.it/50x50?text=5"
             class="hover"
-            data-size="1024x1024"
+            data-size="200x200"
           >
             <img
               src="http://placehold.it/50x50?text=5"
@@ -123,7 +119,7 @@
           <a
             href="http://placehold.it/50x50?text=6"
             class="hover"
-            data-size="1024x1024"
+            data-size="200x200"
           >
             <img
               src="http://placehold.it/50x50?text=6"
@@ -134,7 +130,6 @@
         </figure>
       </div>
     </div>
-
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
       <!-- Background of PhotoSwipe.
             It's a separate element as animating opacity is faster than rgba(). -->
@@ -199,11 +194,16 @@
         </div>
       </div>
     </div>
+
     <!-- scripts -->
     <script src="jquery.js"></script>
-    <script src="slick/slick.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="photoswipe/photoswipe.js"></script>
-    <script src="photoswipe/photoswipe-ui-default.js"></script>
+    <script src="photoswipe/photoswipe-ui-default.min.js"></script>
+
     <script src="scripts.js"></script>
   </body>
 </html>

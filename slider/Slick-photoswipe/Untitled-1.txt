@@ -9,6 +9,8 @@ $(document).ready(function() {
         size,
         item;
 
+      console.log(thumbElements);
+
       for (var i = 0; i < numNodes; i++) {
         figureEl = thumbElements[i];
 
@@ -132,6 +134,7 @@ $(document).ready(function() {
             pageYScroll =
               window.pageYOffset || document.documentElement.scrollTop,
             rect = thumbnail.getBoundingClientRect();
+          console.log(thumbnail);
 
           return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
         }

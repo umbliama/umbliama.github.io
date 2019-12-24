@@ -561,7 +561,12 @@
         if (disableAnimation) {
           options.showAnimationDuration = 0;
         }
-
+        for (var findInd = 0; findInd < items.length; findInd++) {
+        if (items[findInd].start) {
+          options.index = findInd;
+          break;
+        }
+      }
         gallery = new PhotoSwipe(
           pswpElement,
           PhotoSwipeUI_Default,
