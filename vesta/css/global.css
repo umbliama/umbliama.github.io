@@ -279,14 +279,15 @@ header {
 }
 .matrix_right {
   background: url(../img/matrasilrgiht.png);
-  width: 100%;
+  width: 55%;
   height: 100%;
   display: block;
-  background-size: 134%;
+  background-size: 246%;
   position: absolute;
-  top: 32%;
+  top: 33%;
   z-index: -1;
-  right: -41%;
+  left: 45%;
+  overflow: hidden;
   background-repeat: no-repeat;
 }
 .line_dfd {
