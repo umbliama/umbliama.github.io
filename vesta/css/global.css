@@ -334,9 +334,14 @@ header {
   position: relative;
   margin-top: 6rem;
 }
+.section5__logo {
+  position: absolute;
+  top: 31%;
+  right: 64%;
+}
 #section7 {
   background-image: url(../img/right_f.jpg);
-  background-size: 16%;
+  background-size: 15%;
   background-repeat: no-repeat;
   background-position: right top;
   z-index: 14;
@@ -718,6 +723,7 @@ header {
   margin: -135px 0px 0 135px;
 }
 .bed__text {
+  margin: 0 26px;
   display: flex;
 }
 
@@ -736,8 +742,13 @@ header {
 .bed__dots {
   position: absolute;
   display: flex;
-  top: 32%;
-  right: 21%;
+  top: 38%;
+  right: 31%;
+}
+.bed__logo {
+  position: absolute;
+  top: 30%;
+  right: 13%;
 }
 .bed__dot {
   width: 56px;
