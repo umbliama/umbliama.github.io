@@ -88,7 +88,12 @@ $(document).ready(function() {
     center: true,
     items: 1,
     dotsClass: "bed__dots",
-    dotClass: "bed__dot"
+    dotClass: "bed__dot",
+    navText: [
+      '<div style="display:none" class="bed__nav"><img src="./img/nav.png"></div>',
+      '<div style="display:none" class="bed__nav"><img src="./img/nav.png"></div>'
+    ],
+    mouseDrag: false
   });
   $(".owl-carousel").owlCarousel({
     dots: true,
