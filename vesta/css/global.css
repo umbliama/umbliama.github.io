@@ -832,7 +832,7 @@ header {
   flex-direction: column;
 }
 .modal__signup-input {
-  margin: 19px auto 0;
+  margin: 36px auto 0;
   border-radius: 31px;
   background-color: #dedede;
   border: none;
