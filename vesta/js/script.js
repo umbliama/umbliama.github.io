@@ -97,8 +97,8 @@ $(document).ready(function() {
     loop: true,
     margin: 0,
     navText: [
-      '<div class="left_nav"><img src="./img/nav.png"></div>',
-      '<div><img src="./img/nav.png"></div>'
+      '<div class="left_nav"><img src="/img/nav.png"></div>',
+      '<div><img src="/img/nav.png"></div>'
     ],
     center: true
   });
