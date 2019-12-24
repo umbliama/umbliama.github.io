@@ -941,7 +941,7 @@ header {
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   width: 50%; /* Could be more or less, depending on screen size */
-  height: 52%;
+  height: 47%;
 }
 .modal__quiz__flowers--left {
   position: absolute;
@@ -958,7 +958,7 @@ header {
   right: 0;
 }
 .modal__quiz-form {
-  margin: 50px 0 0 0;
+  margin: 25px 0 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -974,6 +974,7 @@ header {
 }
 .modal__quiz-heading {
   color: #8c8c8c;
+  font-weight: 400;
   font-family: "Palatino Linotype - Roman";
 }
 .modal__quiz-submit {
@@ -1011,7 +1012,8 @@ header {
   display: inline-block;
   font-size: 20px;
   color: #8c8c8c;
-  font-family: "Palatino Linotype - Roman";
+  font-family: "Candara";
+  font-weight: 400;
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
@@ -1021,7 +1023,7 @@ header {
   top: 0;
   width: 18px;
   height: 18px;
-  border: 1px solid #ddd;
+  border: 1px solid #8c8c8c;
   border-radius: 100%;
   background: #fff;
 }
