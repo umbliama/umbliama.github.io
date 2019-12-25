@@ -361,6 +361,7 @@ header {
   transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
   cursor: pointer;
 }
+
 .signup_link {
   display: flex;
   justify-content: center;
@@ -976,6 +977,10 @@ header {
   color: #8c8c8c;
   font-weight: 400;
   font-family: "Palatino Linotype - Roman";
+}
+.modal__quiz-submit:hover {
+  width:35%;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
 }
 .modal__quiz-submit {
   margin: 81px auto;
