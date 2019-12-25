@@ -979,13 +979,16 @@ header {
   font-family: "Palatino Linotype - Roman";
 }
 .modal__quiz-submit:hover {
-  width:35%;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+  width: 55%;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  padding: 10px 0;
 }
 .modal__quiz-submit {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
   margin: 81px auto;
   z-index: 1000;
-  width: 30%;
+  width: 50%;
   z-index: 1000;
   box-shadow: 7px 12px 18px rgba(0, 0, 0, 0.2);
   border-radius: 36px;
