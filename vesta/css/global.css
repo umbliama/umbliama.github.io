@@ -927,6 +927,12 @@ header {
   );
   font-family: Candara;
   font-size: 20px;
+  transition: ease-in 0.3s;
+}
+.modal__signup-submit:hover {
+  padding: 10px 0;
+  transition: ease-out 0.3s;
+  width: 67%;
 }
 .modal__signup__background {
   bottom: 0;
