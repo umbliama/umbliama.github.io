@@ -19,6 +19,10 @@
   font-family: "OpenSansSemiBold";
   src: url("../fonts/OpenSans-SemiBold.ttf");
 }
+@font-face {
+  font-family: "RubikMedium";
+  src: url("../fonts/Rubik-Medium.ttf");
+}
 @mixin for-phone-only {
   @media (max-width: 599px) {
     @content;
@@ -58,6 +62,9 @@
 }
 @mixin mntrega {
   font-family: "MontserratRegular";
+}
+@mixin rbkmed {
+  font-family: "RubikMedium";
 }
 
 .btn {
@@ -1013,7 +1020,22 @@ body {
       }
       &-image {
         position: relative;
-        top: 50px;
+        top: 62px;
+        &__backtext {
+          font-size: 120px;
+          line-height: 163px;
+          text-transform: uppercase;
+          right: 0;
+          position: absolute;
+          @include osbold();
+          -webkit-text-stroke: 2px rgba($color: #000000, $alpha: 0.1);
+          z-index: -1;
+          color: transparent;
+          top: -85px;
+          @include for-phone-only() {
+            display: none;
+          }
+        }
 
         right: 26px;
         @include for-phone-only() {
@@ -1114,6 +1136,270 @@ body {
         /* identical to box height */
 
         color: #000000;
+      }
+    }
+  }
+}
+.section-service-item {
+  padding: 75px 0 87px 0;
+  &__heading {
+    font-size: 24px;
+    @include osbold();
+    max-width: 657px;
+    @include for-phone-only() {
+      padding: 0 0 0 16px;
+    }
+  }
+  &-inner {
+  }
+  &-content {
+    &-btn {
+      display: flex;
+      margin: 64px 0 0 290px;
+      @include for-phone-only() {
+        margin: 20px 0 0 0;
+        justify-content: center;
+      }
+      &__btn {
+        background: url("../images/service-item-btn.png") no-repeat;
+        width: 173px;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        align-items: center;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+        height: 38px;
+      }
+    }
+  }
+}
+.section-404 {
+  &-nav {
+    margin: 0 0 30px 0;
+  }
+  &-link {
+    color: #202020;
+    font-size: 16px;
+    @include ossemibold();
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &-content {
+    padding: 0 16px 0;
+    &-main {
+      padding: 0 0 30px 0;
+    }
+    &__heading {
+      font-size: 150px;
+      line-height: 204px;
+      text-align: center;
+      color: #000000;
+      @include osbold();
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      color: #8f8f8f;
+      @include osregular();
+    }
+  }
+}
+
+.section-product {
+  padding: 30px 0 30px 0;
+  order: 1;
+  display: flex;
+  & .slider-main {
+    margin: 0 0 10px 0;
+    & img {
+      width: 100%;
+    }
+  }
+  & .slider-nav {
+    & figure {
+      margin: 0 10px 0 0;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+  &-inner {
+    background: #fff;
+    padding: 30px 30px;
+    max-width: 693px;
+  }
+  &-outer {
+  }
+  &-content {
+    &-item {
+      &-images {
+        & .slick-slide {
+        }
+      }
+      &-title {
+        &__title {
+          font-size: 24px;
+          color: #202020;
+          @include osbold();
+        }
+        &-address {
+          display: flex;
+          align-items: center;
+          padding: 0 0 30px 0;
+
+          &__title {
+            font-size: 16px;
+            color: #202020;
+            @include osregular();
+            margin: 0 10px 0 0;
+          }
+          &__link {
+            color: #2b87db;
+            font-size: 14px;
+            @include osregular();
+          }
+        }
+      }
+      &-desc {
+        &__container {
+          display: flex;
+          margin: 50px 0 50px 0;
+        }
+        &-square {
+          &__title {
+            @include rbkmed();
+            font-size: 24px;
+          }
+          &__text {
+            @include osregular();
+            font-size: 16px;
+          }
+        }
+        &-floor {
+          margin: 0 75px;
+          &__title {
+            @include rbkmed();
+            font-size: 24px;
+          }
+          &__text {
+            @include osregular();
+            font-size: 16px;
+          }
+        }
+        &-floorLimit {
+          &__title {
+            @include rbkmed();
+            font-size: 24px;
+          }
+          &__text {
+            @include osregular();
+            font-size: 16px;
+          }
+        }
+        &-separator {
+          background: #e7e7e7;
+          width: 100%;
+          height: 1px;
+        }
+        &-address {
+          margin: 50px 0 0 0;
+          &__title {
+            font-size: 24px;
+            color: #202020;
+            margin: 0 0 14px 0;
+
+            @include ossemibold;
+          }
+        }
+        &-desc {
+          &__title {
+            font-size: 24px;
+            @include osregular();
+          }
+        }
+        &-socials {
+          margin: 30px 0 0;
+          &__link {
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+.section-product-map {
+  padding: 0 0 20px 0;
+  &-inner {
+    background: #fff;
+    max-width: 753px;
+    &__title {
+      @include osregular();
+      font-size: 16px;
+      padding: 30px 0 30px 30px;
+    }
+  }
+  &-content {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0 0;
+    padding: 0 0 45px 0;
+  }
+}
+.section-similiar {
+  background: #fff;
+  padding: 0 0 30px 0;
+  margin: 0 0 20px 0;
+  &-outer {
+  }
+  &-content {
+    &__heading {
+      padding: 30px 0 30px 0;
+    }
+    &-list {
+      display: flex;
+    }
+  }
+}
+
+.section-seller {
+  order: 2;
+  &-inner {
+    background: #fff;
+    max-width: 367px;
+    padding: 35px 0 30px;
+  }
+  &-content {
+    &-desc {
+      display: flex;
+      align-items: center;
+    }
+    &__price {
+      padding: 0 87px 0 10px;
+    }
+    &__id {
+      font-size: 20px;
+      padding: 0 10px 0 0;
+      @include osregular();
+      color: rgba(0, 0, 0, 0.4);
+    }
+    &__meterPrice {
+      color: #8f8f8f;
+      @include osregular();
+      font-size: 16px;
+      margin: 0 0 20px 10px;
+    }
+    &-profile {
+      &__avatar {
+        padding: 46px 0 0 30px;
       }
     }
   }

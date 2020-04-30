@@ -18,6 +18,10 @@
   font-family: "OpenSansSemiBold";
   src: url("../fonts/OpenSans-SemiBold.ttf"); }
 
+@font-face {
+  font-family: "RubikMedium";
+  src: url("../fonts/Rubik-Medium.ttf"); }
+
 .btn-request {
   padding: 9px 17px;
   position: relative;
@@ -808,8 +812,22 @@ body {
         padding: 60px 16px; } }
   .section-owners-content-card-image {
     position: relative;
-    top: 50px;
+    top: 62px;
     right: 26px; }
+    .section-owners-content-card-image__backtext {
+      font-size: 120px;
+      line-height: 163px;
+      text-transform: uppercase;
+      right: 0;
+      position: absolute;
+      font-family: "OpenSansBold";
+      -webkit-text-stroke: 2px rgba(0, 0, 0, 0.1);
+      z-index: -1;
+      color: transparent;
+      top: -85px; }
+      @media (max-width: 599px) {
+        .section-owners-content-card-image__backtext {
+          display: none; } }
     @media (max-width: 599px) {
       .section-owners-content-card-image {
         top: 36px;
@@ -891,3 +909,190 @@ body {
         line-height: 22px;
         /* identical to box height */
         color: #000000; }
+
+.section-service-item {
+  padding: 75px 0 87px 0; }
+  .section-service-item__heading {
+    font-size: 24px;
+    font-family: "OpenSansBold";
+    max-width: 657px; }
+    @media (max-width: 599px) {
+      .section-service-item__heading {
+        padding: 0 0 0 16px; } }
+  .section-service-item-content-btn {
+    display: flex;
+    margin: 64px 0 0 290px; }
+    @media (max-width: 599px) {
+      .section-service-item-content-btn {
+        margin: 20px 0 0 0;
+        justify-content: center; } }
+    .section-service-item-content-btn__btn {
+      background: url("../images/service-item-btn.png") no-repeat;
+      width: 173px;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      align-items: center;
+      -webkit-touch-callout: none;
+      /* iOS Safari */
+      -webkit-user-select: none;
+      /* Safari */
+      -khtml-user-select: none;
+      /* Konqueror HTML */
+      -moz-user-select: none;
+      /* Old versions of Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+      user-select: none;
+      height: 38px; }
+
+.section-404-nav {
+  margin: 0 0 30px 0; }
+
+.section-404-link {
+  color: #202020;
+  font-size: 16px;
+  font-family: "OpenSansSemiBold";
+  text-align: center;
+  text-transform: uppercase; }
+
+.section-404-content {
+  padding: 0 16px 0; }
+  .section-404-content-main {
+    padding: 0 0 30px 0; }
+  .section-404-content__heading {
+    font-size: 150px;
+    line-height: 204px;
+    text-align: center;
+    color: #000000;
+    font-family: "OpenSansBold"; }
+  .section-404-content__text {
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    text-align: center;
+    color: #8f8f8f;
+    font-family: "OpenSansRegular"; }
+
+.section-product {
+  padding: 30px 0 30px 0;
+  order: 1;
+  display: flex; }
+  .section-product .slider-main {
+    margin: 0 0 10px 0; }
+    .section-product .slider-main img {
+      width: 100%; }
+  .section-product .slider-nav figure {
+    margin: 0 10px 0 0; }
+  .section-product .slider-nav img {
+    width: 100%; }
+  .section-product-inner {
+    background: #fff;
+    padding: 30px 30px;
+    max-width: 693px; }
+  .section-product-content-item-title__title {
+    font-size: 24px;
+    color: #202020;
+    font-family: "OpenSansBold"; }
+  .section-product-content-item-title-address {
+    display: flex;
+    align-items: center;
+    padding: 0 0 30px 0; }
+    .section-product-content-item-title-address__title {
+      font-size: 16px;
+      color: #202020;
+      font-family: "OpenSansRegular";
+      margin: 0 10px 0 0; }
+    .section-product-content-item-title-address__link {
+      color: #2b87db;
+      font-size: 14px;
+      font-family: "OpenSansRegular"; }
+  .section-product-content-item-desc__container {
+    display: flex;
+    margin: 50px 0 50px 0; }
+  .section-product-content-item-desc-square__title {
+    font-family: "RubikMedium";
+    font-size: 24px; }
+  .section-product-content-item-desc-square__text {
+    font-family: "OpenSansRegular";
+    font-size: 16px; }
+  .section-product-content-item-desc-floor {
+    margin: 0 75px; }
+    .section-product-content-item-desc-floor__title {
+      font-family: "RubikMedium";
+      font-size: 24px; }
+    .section-product-content-item-desc-floor__text {
+      font-family: "OpenSansRegular";
+      font-size: 16px; }
+  .section-product-content-item-desc-floorLimit__title {
+    font-family: "RubikMedium";
+    font-size: 24px; }
+  .section-product-content-item-desc-floorLimit__text {
+    font-family: "OpenSansRegular";
+    font-size: 16px; }
+  .section-product-content-item-desc-separator {
+    background: #e7e7e7;
+    width: 100%;
+    height: 1px; }
+  .section-product-content-item-desc-address {
+    margin: 50px 0 0 0; }
+    .section-product-content-item-desc-address__title {
+      font-size: 24px;
+      color: #202020;
+      margin: 0 0 14px 0;
+      font-family: "OpenSansSemiBold"; }
+  .section-product-content-item-desc-desc__title {
+    font-size: 24px;
+    font-family: "OpenSansRegular"; }
+  .section-product-content-item-desc-socials {
+    margin: 30px 0 0; }
+    .section-product-content-item-desc-socials__link {
+      margin: 0 10px 0 0; }
+
+.section-product-map {
+  padding: 0 0 20px 0; }
+  .section-product-map-inner {
+    background: #fff;
+    max-width: 753px; }
+    .section-product-map-inner__title {
+      font-family: "OpenSansRegular";
+      font-size: 16px;
+      padding: 30px 0 30px 30px; }
+  .section-product-map-content {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0 0;
+    padding: 0 0 45px 0; }
+
+.section-similiar {
+  background: #fff;
+  padding: 0 0 30px 0;
+  margin: 0 0 20px 0; }
+  .section-similiar-content__heading {
+    padding: 30px 0 30px 0; }
+  .section-similiar-content-list {
+    display: flex; }
+
+.section-seller {
+  order: 2; }
+  .section-seller-inner {
+    background: #fff;
+    max-width: 367px;
+    padding: 35px 0 30px; }
+  .section-seller-content-desc {
+    display: flex;
+    align-items: center; }
+  .section-seller-content__price {
+    padding: 0 87px 0 10px; }
+  .section-seller-content__id {
+    font-size: 20px;
+    padding: 0 10px 0 0;
+    font-family: "OpenSansRegular";
+    color: rgba(0, 0, 0, 0.4); }
+  .section-seller-content__meterPrice {
+    color: #8f8f8f;
+    font-family: "OpenSansRegular";
+    font-size: 16px;
+    margin: 0 0 20px 10px; }
+  .section-seller-content-profile__avatar {
+    padding: 46px 0 0 30px; }
