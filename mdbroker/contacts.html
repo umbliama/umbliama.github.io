@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <title>Contacts</title>
   </head>
   <body>
-    <!-- Шапка типовая -->
     <section
       class="section-header-typical-outer section-header-typical"
       id="section-header-typical"
@@ -123,110 +122,53 @@
         <div class="section-header-typical-footer"></div>
       </div>
     </section>
-    <!-- Шапка типовая -->
-    <section
-      class="section-services-outer section-services"
-      id="section-services"
-    >
-      <div class="section-services-inner section-inner">
-        <div class="default-heading-container">
-          <div class="default-separator"></div>
-          <div class="default-heading">Услуги</div>
-        </div>
-        <div class="section-services-content">
-          <div class="service-card-list">
-            <div class="service-card-list__list">
-              <div class="service-card-list__group">
-                <div class="service-card-list__number">01</div>
-
-                <div class="service-card-list__item">
-                  <img
-                    class="service-card-list__img"
-                    src="./images/property 1.png"
-                    alt=""
-                  />
-                  <p class="service-card-list__paragraph">
-                    Частные и корпоративные инвестиции, разработка и ведение
-                    стратегии инвестора
-                  </p>
-                </div>
-              </div>
-              <div class="service-card-list__group">
-                <div class="service-card-list__number">02</div>
-
-                <div class="service-card-list__item">
-                  <img
-                    class="service-card-list__img"
-                    src="./images/contract 1.png"
-                    alt=""
-                  />
-                  <p class="service-card-list__paragraph">
-                    Консультации по всем вопросам, связанным с недвижимостью
-                  </p>
-                </div>
-              </div>
-              <div class="service-card-list__group">
-                <div class="service-card-list__number">03</div>
-
-                <div class="service-card-list__item">
-                  <img
-                    class="service-card-list__img"
-                    src="./images/landlord 1.png"
-                    alt=""
-                  />
-                  <p class="service-card-list__paragraph">
-                    Адресный поиск покупателя, арендатора на объект недвижимости
-                  </p>
-                </div>
-              </div>
-              <div class="service-card-list__group">
-                <div class="service-card-list__number">04</div>
-
-                <div class="service-card-list__item">
-                  <img
-                    class="service-card-list__img"
-                    src="./images/negotiate 1.png"
-                    alt=""
-                  />
-                  <p class="service-card-list__paragraph">
-                    Представление интересов арендатора, покупателя при поиске
-                    объекта недвижимости
-                  </p>
-                </div>
-              </div>
-              <div class="service-card-list__group">
-                <div class="service-card-list__number">05</div>
-
-                <div class="service-card-list__item">
-                  <img
-                    class="service-card-list__img"
-                    src="./images/purchase 1.png"
-                    alt=""
-                  />
-                  <p class="service-card-list__paragraph">
-                    Управление недвижимостью
-                  </p>
-                </div>
-              </div>
-              <div class="service-card-list__group">
-                <div class="service-card-list__number">06</div>
-
-                <div class="service-card-list__item">
-                  <img
-                    class="service-card-list__img"
-                    src="./images/bag service.png"
-                    alt=""
-                  />
-                  <p class="service-card-list__paragraph">
-                    Юридическое сопровождение сделок
-                  </p>
-                </div>
-              </div>
-            </div>
+    <section class="section-map-outer section-map" id="section-map">
+      <div class="section-map-inner section-inner">
+        <div class="section-map-content">
+          <div class="section-map-content-heading default-heading-container">
+            <span
+              class="section-map-content-heading__line default-separator"
+            ></span>
+            <h2 class="section-map-content-heading__heading default-heading">
+              Контакты
+            </h2>
           </div>
         </div>
-        <div class="section-services-footer"></div>
+
+        <div class="section-map-footer"></div>
       </div>
+      <div class="section-map-outer-box">
+        <div class="section-map-outer-box-container">
+          <div class="section-map-outer-box-props">
+            <p class="section-map-outer-box-props__prop">Адрес</p>
+            <p class="section-map-outer-box-values__value">
+              123456, г. Москва, ул. Подвойского, д. 14, стр. 7
+            </p>
+          </div>
+          <div class="section-map-outer-box-values">
+            <p class="section-map-outer-box-props__prop">
+              Телефон
+            </p>
+            <p class="section-map-outer-box-values__value">
+              +7 (821) 463-43-43
+            </p>
+          </div>
+          <div
+            class="section-service-item-content-btn section-map-outer-box-container-btn"
+          >
+            <a
+              class="section-service-item-content-btn__btn section-map-outer-box-container-btn__btn"
+              >Оставить заявку</a
+            >
+          </div>
+        </div>
+      </div>
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac9446cc0396eb674d3f6f7d3909900631a62c84df1f02afb73c81705916f8421&amp;source=constructor"
+        width="100%"
+        height="316"
+        frameborder="0"
+      ></iframe>
     </section>
     <section class="section-footer-outer section-footer" id="section-footer">
       <div class="section-footer-inner section-inner">
@@ -291,7 +233,5 @@
         <div class="section-footer-footer"></div>
       </div>
     </section>
-    <script src="./js/libs/jquery/jquery.min.js"></script>
-    <script src="./js/interface.js"></script>
   </body>
 </html>

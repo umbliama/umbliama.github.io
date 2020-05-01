@@ -317,6 +317,15 @@ $(document).ready(function () {
       arrows: false,
       speed: 1,
       width: 300,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+          },
+        },
+      ],
     });
 
     //remove active class from all thumbnail slides
