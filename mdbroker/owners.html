@@ -123,7 +123,7 @@
             <a class="section-header-typical-nav-phone__link" href="" type="tel"
               >+7 926 174-31-74</a
             >
-            <p class="section-header-typical-nav-phone__request">
+            <p class="section-header-typical-nav-phone__request js-request">
               Оставить заявку
             </p>
           </div>
@@ -298,7 +298,40 @@
         <div class="section-footer-footer"></div>
       </div>
     </section>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-heading">
+          <h2 class="modal-heading__heading">Свяжитесь с нами</h2>
+        </div>
+        <div class="modal-input-group">
+          <label for="">Ваше имя</label>
+          <input
+            class="modal-input-group__input"
+            type="text"
+            placeholder="Как к вам обращаться?"
+          />
+        </div>
+        <div class="modal-input-group">
+          <label for="">Ваш телефон</label>
+          <input
+            class="modal-input-group__input"
+            type="text"
+            placeholder="+7 (___) ___-__-__"
+          />
+        </div>
+        <div class="modal-btn">
+          <a class="modal-btn__btn">Связаться со мной</a>
+        </div>
+        <div class="modal-checkbox">
+          <input type="checkbox" id="fruit1" name="fruit-1" value="Apple" />
+          <label for="fruit1">Я согласен с <a href="">условиями</a></label>
+        </div>
+      </div>
+    </div>
     <script src="./js/libs/jquery/jquery.min.js"></script>
     <script src="./js/interface.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
