@@ -420,6 +420,7 @@ body {
   &-content {
     position: relative;
     display: flex;
+
     @include for-phone-only() {
       justify-content: space-between;
     }
@@ -427,7 +428,8 @@ body {
       justify-content: space-between;
     }
     &-mobile-menu {
-      display: none;
+      visibility: hidden;
+
       @include for-tablet-portrait-up() {
         display: none;
       }
@@ -438,14 +440,19 @@ body {
       position: absolute;
       z-index: 1000;
       width: 100%;
-      transform: translateX(26%);
+      transition: 0.5s all ease-in;
+
+      transform: translateX(126%);
       height: 100%;
       &--close {
         display: flex;
         padding: 62px 0 0 64%;
       }
       &.active {
-        display: block;
+        visibility: visible;
+        transform: translateX(26%);
+        transition: 0.5s transform ease-in;
+        height: 100vh;
       }
       &__list {
         padding: 10px 0 0 50px;
@@ -466,7 +473,35 @@ body {
       }
     }
     &-menu {
+      transition: 0.3s ease-in;
+
       &-btn {
+        z-index: 10000;
+        transition: 0.3s ease-in;
+
+        &.active {
+          transition: 0.3s ease-in;
+
+          & .menu-top {
+            width: 22px;
+            height: 3px;
+            display: block;
+            background: #fff;
+            transform: rotate(45deg);
+            transition: 0.3s ease-in;
+          }
+          & .menu-middle {
+            width: 22px;
+            height: 3px;
+            display: block;
+            background: #fff;
+            transform: translateY(-8px) rotate(-45deg);
+            transition: 0.3s ease-in;
+          }
+          & .menu-bottom {
+            display: none;
+          }
+        }
         @include for-tablet-landscape-up() {
           display: none;
         }
@@ -476,6 +511,7 @@ body {
           height: 3px;
           display: block;
           background: #fff;
+          transition: 0.3s ease-in;
         }
         & .menu-middle {
           width: 22px;
@@ -483,12 +519,14 @@ body {
           display: block;
           background: #fff;
           margin: 5px 0 5px 0;
+          transition: 0.3s ease-in;
         }
         & .menu-bottom {
           width: 22px;
           height: 3px;
           display: block;
           background: #fff;
+          transition: 0.3s ease-in;
         }
       }
     }
@@ -2190,6 +2228,12 @@ body {
       border: 1px solid #e3e3e3;
       box-sizing: border-box;
       border-radius: 3px;
+      @include for-phone-only {
+        padding: 8px 121px 7px 10px;
+      }
+      @media (max-width: 320px) {
+        padding: 8px 82px 7px 10px;
+      }
     }
   }
   &-btn {

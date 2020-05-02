@@ -1,10 +1,15 @@
 $(".js-menu").on("click", function () {
   $(".section-header-content-mobile-menu").toggleClass("active");
-  $(".section-header-content").css("height", "100vh");
+
+  $(this).toggleClass("active");
+  if ($(this).hasClass("active")) {
+    $(".section-header-content").css("height", "100vh");
+  } else {
+    $(".section-header-content").css("height", "100%");
+  }
 });
-$(".js-menu-close").on("click", function () {
+$(".js-menu active").on("click", function () {
   $(".section-header-content-mobile-menu").removeClass("active");
-  $(".section-header-content").css("height", "100%");
 });
 if ($("#slider-range").length > 0) {
   $("#slider-range").slider({
