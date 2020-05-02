@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Аренда</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./js/libs/jquery/jquery-ui.css" />
   </head>
   <body>
     <!-- Шапка типовая -->
@@ -31,36 +32,44 @@
             <div class="section-header-content-mobile-menu__list">
               <div class="section-header-content-mobile-menu__item">
                 <a
-                  href="/rent.html"
+                  href="./rent.html"
                   class="section-header-content-mobile-menu__link"
                   >аренда</a
                 >
               </div>
               <div class="section-header-content-mobile-menu__item">
                 <a
-                  href="/rent.html"
+                  href="./rent.html"
                   class="section-header-content-mobile-menu__link"
-                  >аренда</a
+                  >покупка</a
                 >
               </div>
               <div class="section-header-content-mobile-menu__item">
-                <a href="" class="section-header-content-mobile-menu__link"
-                  >аренда</a
+                <a
+                  href="./services.html"
+                  class="section-header-content-mobile-menu__link"
+                  >услуги</a
                 >
               </div>
               <div class="section-header-content-mobile-menu__item">
-                <a href="" class="section-header-content-mobile-menu__link"
-                  >аренда</a
+                <a
+                  href="./owners.html"
+                  class="section-header-content-mobile-menu__link"
+                  >собственникам</a
                 >
               </div>
               <div class="section-header-content-mobile-menu__item">
-                <a href="" class="section-header-content-mobile-menu__link"
-                  >аренда</a
+                <a
+                  href="./about.html"
+                  class="section-header-content-mobile-menu__link"
+                  >о компании</a
                 >
               </div>
               <div class="section-header-content-mobile-menu__item">
-                <a href="" class="section-header-content-mobile-menu__link"
-                  >аренда</a
+                <a
+                  href="./contacts.html"
+                  class="section-header-content-mobile-menu__link"
+                  >контакты</a
                 >
               </div>
             </div>
@@ -126,9 +135,561 @@
     <!-- Шапка типовая -->
     <section class="section-filters-outer section-filters" id="section-filters">
       <div class="section-filters-inner section-inner">
-        <div class="section-filters-content"></div>
+        <div class="section-filters-content">
+          <div class="section-filters-content-controls">
+            <div class="section-filters-content-buy custom-select">
+              <div include="form-input-select()">
+                <select
+                  class="section-filters-content-buy custom-select__select"
+                  required
+                >
+                  <option
+                    class="section-filters-content-buy custom-select__option"
+                    value="1"
+                    >Покупка</option
+                  >
+                  <option
+                    class="section-filters-content-buy custom-select__option"
+                    value="2"
+                    >Аренда</option
+                  >
+                </select>
+                <div class="custom-select-icon"></div>
+              </div>
+            </div>
+            <div class="section-filters-content-place">
+              <a class="section-filters-content-place__choose">Район</a>
+              <div class="section-filters-content-place__separator"></div>
+              <a class="section-filters-content-place__choose">Метро</a>
+            </div>
+            <div class="section-filters-content-price">
+              <input
+                class="section-filters-content-price__input"
+                type="text"
+                placeholder="от"
+                id="amount"
+              />
+              <input
+                class="section-filters-content-price__input"
+                type="text"
+                id="amount2"
+                placeholder="до"
+              />
+              <div id="slider-range"></div>
+            </div>
+            <div class="section-filters-content-all">
+              <div include="form-input-select()">
+                <select
+                  class="section-filters-content-buy custom-select__select"
+                  required
+                >
+                  <option
+                    class="section-filters-content-buy custom-select__option"
+                    value="1"
+                    >За все</option
+                  >
+                  <option
+                    class="section-filters-content-buy custom-select__option"
+                    value="2"
+                    >За все</option
+                  >
+                </select>
+                <div class="custom-select-icon"></div>
+              </div>
+            </div>
+            <div class="section-filters-content-allFiltres">
+              <a class="section-filters-content-allFiltres__link js-filtres"
+                >Все фильтры</a
+              >
+            </div>
+            <a
+              class="section-filters-content-show__btn section-filters-content-show__btn--close-filtres"
+              >Показать</a
+            >
+
+            <div class="section-filters-content-show"></div>
+          </div>
+          <div class="section-filters-content-controls--hidden">
+            <div class="section-filters-content-controls">
+              <div class="section-filters-content-square">
+                <p class="section-filters-content-square__text">
+                  Общая площадь
+                </p>
+                <input
+                  class="section-filters-content-price__input"
+                  type="text"
+                  placeholder="от"
+                />
+                <input
+                  class="section-filters-content-price__input"
+                  type="text"
+                  placeholder="до"
+                />
+              </div>
+              <div class="section-filters-content-planning">
+                <div class="section-filters-content-buy custom-select">
+                  <div include="form-input-select()">
+                    <select
+                      class="section-filters-content-buy custom-select__select"
+                      required
+                    >
+                      <option
+                        class="section-filters-content-buy custom-select__option"
+                        value="1"
+                        >Планировка</option
+                      >
+                      <option
+                        class="section-filters-content-buy custom-select__option"
+                        value="2"
+                        >Аренда</option
+                      >
+                    </select>
+                    <div class="custom-select-icon"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section-filters-content-floor">
+                <p class="section-filters-content-floor__text">Этаж</p>
+                <input
+                  class="section-filters-content-floor__input"
+                  type="text"
+                  placeholder="от"
+                />
+                <input
+                  class="section-filters-content-floor__input"
+                  type="text"
+                  placeholder="до"
+                />
+                <div id="slider-range"></div>
+              </div>
+              <div class="section-filters-content-floor-limit">
+                <p class="section-filters-content-floor__text">Этажность</p>
+                <input
+                  class="section-filters-content-floor__input"
+                  type="text"
+                  placeholder="от"
+                />
+                <input
+                  class="section-filters-content-floor__input"
+                  type="text"
+                  placeholder="до"
+                />
+                <div id="slider-range"></div>
+              </div>
+
+              <div class="section-filters-content-show"></div>
+            </div>
+            <div class="section-filters-content-controls">
+              <div class="section-filters-content-controls-street">
+                <div class="section-filters-content-controls-street">
+                  <label
+                    class="section-filters-content-controls-street__label"
+                    for=""
+                    >Улица</label
+                  >
+                  <input
+                    class="section-filters-content-controls-street__input"
+                    type="text"
+                    placeholder="Название улицы"
+                  />
+                </div>
+              </div>
+
+              <div class="section-filters-content-house">
+                <label for="" class="section-filters-content-house__label"
+                  >Дом</label
+                >
+                <input
+                  class="section-filters-content-house__input"
+                  type="text"
+                  placeholder="№"
+                />
+
+                <div id="slider-range"></div>
+              </div>
+              <div class="section-filters-content-type">
+                <a class="section-filters-content-type__choose">
+                  Торговое помщение</a
+                >
+                <a class="section-filters-content-type__choose">Земля</a>
+                <a class="section-filters-content-type__choose">Офис</a>
+                <a class="section-filters-content-type__choose"> Склад</a>
+                <a
+                  class="js-close-filtres section-filters-content-allFiltres__type-link section-filters-content-allFiltres__link hidden"
+                >
+                  Скрыть фильтры</a
+                >
+              </div>
+              <a class="section-filters-content-show__btn">Показать</a>
+              <div class="section-filters-content-show"></div>
+            </div>
+          </div>
+        </div>
         <div class="section-filters-footer"></div>
       </div>
     </section>
+    <section class="section-flat-outer section-flat" id="section-flat">
+      <div class="section-flat-inner section-inner">
+        <div class="section-flat-content">
+          <div class="section-flat-content-controls">
+            <h3>Найдено 158 объявлений</h3>
+            <div class="section-flat-content-controls--right">
+              <div class="section-flat-content-controls-map">
+                <img src="./images/map.png" alt="" />
+                <a>Показать на карте</a>
+              </div>
+              <div
+                class="section-filters-content-buy section-filters-content-sort custom-select"
+              >
+                <div include="form-input-select()">
+                  <select
+                    class="section-filters-content-buy custom-select__select sort-select"
+                    required
+                  >
+                    <option
+                      class="section-filters-content-buy custom-select__option"
+                      value="1"
+                      >Сортировать по</option
+                    >
+                    <option
+                      class="section-filters-content-buy custom-select__option"
+                      value="2"
+                      >Аренда</option
+                    >
+                  </select>
+                  <div class="custom-select-icon"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-flat-content-list">
+            <div class="section-hot-outer-list-item">
+              <span class="section-hot-outer-list-item__price">999 000 ₽ </span>
+              <img
+                class="section-hot-outer-list-item__like"
+                src="./images/heart 1.svg"
+                alt=""
+              />
+              <img src="./images/hot.png" alt="" />
+              <div class="section-hot-outer-list-item-desc">
+                <p>
+                  Торговое помещение под магазин, медицинский центр на
+                  Затулинском жилмассиве
+                </p>
+                <span class="section-hot-outer-list-item-desc__price"
+                  >999 000 ₽ за м2
+                </span>
+                <div class="section-hot-outer-list-item-properties">
+                  <div class="section-hot-outer-list-item-properties__ladder">
+                    <img src="./images/ladder.png" alt="" />
+                    <span>14 этаж</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__id">
+                    <p class="section-hot-outer-list-item-properties__id-title">
+                      ID
+                    </p>
+                    <span>34652</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__square">
+                    <img src="./images/square-measument 1.png" alt="" />
+                    <span>3 999,89 м</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-hot-outer-list-item">
+              <span class="section-hot-outer-list-item__price">999 000 ₽ </span>
+              <img
+                class="section-hot-outer-list-item__like"
+                src="./images/heart 1.svg"
+                alt=""
+              />
+              <img src="./images/hot.png" alt="" />
+              <div class="section-hot-outer-list-item-desc">
+                <p>
+                  Торговое помещение под магазин, медицинский центр на
+                  Затулинском жилмассиве
+                </p>
+                <span class="section-hot-outer-list-item-desc__price"
+                  >999 000 ₽ за м2
+                </span>
+                <div class="section-hot-outer-list-item-properties">
+                  <div class="section-hot-outer-list-item-properties__ladder">
+                    <img src="./images/ladder.png" alt="" />
+                    <span>14 этаж</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__id">
+                    <p class="section-hot-outer-list-item-properties__id-title">
+                      ID
+                    </p>
+                    <span>34652</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__square">
+                    <img src="./images/square-measument 1.png" alt="" />
+                    <span>3 999,89 м</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-hot-outer-list-item">
+              <span class="section-hot-outer-list-item__price">999 000 ₽ </span>
+              <img
+                class="section-hot-outer-list-item__like"
+                src="./images/heart 1.svg"
+                alt=""
+              />
+              <img src="./images/hot.png" alt="" />
+              <div class="section-hot-outer-list-item-desc">
+                <p>
+                  Торговое помещение под магазин, медицинский центр на
+                  Затулинском жилмассиве
+                </p>
+                <span class="section-hot-outer-list-item-desc__price"
+                  >999 000 ₽ за м2
+                </span>
+                <div class="section-hot-outer-list-item-properties">
+                  <div class="section-hot-outer-list-item-properties__ladder">
+                    <img src="./images/ladder.png" alt="" />
+                    <span>14 этаж</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__id">
+                    <p class="section-hot-outer-list-item-properties__id-title">
+                      ID
+                    </p>
+                    <span>34652</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__square">
+                    <img src="./images/square-measument 1.png" alt="" />
+                    <span>3 999,89 м</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-flat-content-list">
+            <div class="section-hot-outer-list-item">
+              <span class="section-hot-outer-list-item__price">999 000 ₽ </span>
+              <img
+                class="section-hot-outer-list-item__like"
+                src="./images/heart 1.svg"
+                alt=""
+              />
+              <img src="./images/hot.png" alt="" />
+              <div class="section-hot-outer-list-item-desc">
+                <p>
+                  Торговое помещение под магазин, медицинский центр на
+                  Затулинском жилмассиве
+                </p>
+                <span class="section-hot-outer-list-item-desc__price"
+                  >999 000 ₽ за м2
+                </span>
+                <div class="section-hot-outer-list-item-properties">
+                  <div class="section-hot-outer-list-item-properties__ladder">
+                    <img src="./images/ladder.png" alt="" />
+                    <span>14 этаж</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__id">
+                    <p class="section-hot-outer-list-item-properties__id-title">
+                      ID
+                    </p>
+                    <span>34652</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__square">
+                    <img src="./images/square-measument 1.png" alt="" />
+                    <span>3 999,89 м</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-hot-outer-list-item">
+              <span class="section-hot-outer-list-item__price">999 000 ₽ </span>
+              <img
+                class="section-hot-outer-list-item__like"
+                src="./images/heart 1.svg"
+                alt=""
+              />
+              <img src="./images/hot.png" alt="" />
+              <div class="section-hot-outer-list-item-desc">
+                <p>
+                  Торговое помещение под магазин, медицинский центр на
+                  Затулинском жилмассиве
+                </p>
+                <span class="section-hot-outer-list-item-desc__price"
+                  >999 000 ₽ за м2
+                </span>
+                <div class="section-hot-outer-list-item-properties">
+                  <div class="section-hot-outer-list-item-properties__ladder">
+                    <img src="./images/ladder.png" alt="" />
+                    <span>14 этаж</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__id">
+                    <p class="section-hot-outer-list-item-properties__id-title">
+                      ID
+                    </p>
+                    <span>34652</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__square">
+                    <img src="./images/square-measument 1.png" alt="" />
+                    <span>3 999,89 м</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-hot-outer-list-item">
+              <span class="section-hot-outer-list-item__price">999 000 ₽ </span>
+              <img
+                class="section-hot-outer-list-item__like"
+                src="./images/heart 1.svg"
+                alt=""
+              />
+              <img src="./images/hot.png" alt="" />
+              <div class="section-hot-outer-list-item-desc">
+                <p>
+                  Торговое помещение под магазин, медицинский центр на
+                  Затулинском жилмассиве
+                </p>
+                <span class="section-hot-outer-list-item-desc__price"
+                  >999 000 ₽ за м2
+                </span>
+                <div class="section-hot-outer-list-item-properties">
+                  <div class="section-hot-outer-list-item-properties__ladder">
+                    <img src="./images/ladder.png" alt="" />
+                    <span>14 этаж</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__id">
+                    <p class="section-hot-outer-list-item-properties__id-title">
+                      ID
+                    </p>
+                    <span>34652</span>
+                  </div>
+                  <span class="section-hot-outer-list-item-separator"></span>
+                  <div class="section-hot-outer-list-item-properties__square">
+                    <img src="./images/square-measument 1.png" alt="" />
+                    <span>3 999,89 м</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-flat-pagination">
+          <a
+            class="section-flat-pagination__item section-flat-pagination__item--number js-pagination active"
+            >1</a
+          >
+          <a
+            class="section-flat-pagination__item section-flat-pagination__item--number js-pagination"
+            >2</a
+          >
+          <a
+            class="section-flat-pagination__item section-flat-pagination__item--number js-pagination"
+            >3</a
+          >
+          <a
+            class="section-flat-pagination__item section-flat-pagination__item--number js-pagination"
+            >4</a
+          >
+          <a
+            class="section-flat-pagination__item section-flat-pagination__item--number js-pagination"
+            >5</a
+          >
+          <a
+            class="section-flat-pagination__item section-flat-pagination__item--number js-pagination"
+            >6</a
+          >
+          <a
+            class="section-flat-pagination__item section-flat-pagination__item--number js-pagination"
+            >7</a
+          >
+          <a
+            class="section-flat-pagination__item section-flat-pagination__item--number js-pagination"
+            >8</a
+          >
+          <a class="section-flat-pagination__item">></a>
+        </div>
+
+        <div class="section-flat-flat"></div>
+      </div>
+    </section>
+    <section class="section-footer-outer section-footer" id="section-footer">
+      <div class="section-footer-inner section-inner">
+        <div class="section-footer-content">
+          <div class="section-footer-content-main">
+            <div class="section-footer-content-main-logo">
+              <img src="./images/footer-logo.png" alt="" />
+              <div class="section-footer-content-main-logo-desc">
+                <a class="section-footer-content-main-logo-desc__link" href="#"
+                  >Политика конфиденциальности</a
+                >
+                <p>
+                  Разработано в
+                  <a
+                    class="section-footer-content-main-logo-desc__link"
+                    href="#"
+                  >
+                    Site-Mechanics</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="section-footer-content-main-nav">
+              <a href="#" class="section-footer-content-main-nav__link"
+                >аренда</a
+              >
+              <a href="#" class="section-footer-content-main-nav__link"
+                >покупка</a
+              >
+              <a href="#" class="section-footer-content-main-nav__link"
+                >услуги</a
+              >
+              <a href="#" class="section-footer-content-main-nav__link"
+                >собственникам</a
+              >
+              <a href="#" class="section-footer-content-main-nav__link"
+                >о компании</a
+              >
+              <a href="#" class="section-footer-content-main-nav__link"
+                >контакты</a
+              >
+            </div>
+            <div class="section-footer-content-main-contacts">
+              <a
+                class="section-footer-content-main-contacts__link"
+                href=""
+                type="tel"
+                >+7 926 174-31-74</a
+              >
+              <a
+                class="section-footer-content-main-contacts__btn btn btn-request"
+                >Оставить заявку
+                <div class="btn-request__triangle"></div
+              ></a>
+              <p class="section-footer-content-main-contacts__crm">
+                Сайт создан и наполняется с помощью Real Estate CRM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer-footer"></div>
+      </div>
+    </section>
+    <script src="./js/libs/jquery/jquery.min.js"></script>
+
+    <script src="./js/libs/jquery/jquery-ui.js"></script>
+
+    <script src="./js/interface.js"></script>
   </body>
 </html>
