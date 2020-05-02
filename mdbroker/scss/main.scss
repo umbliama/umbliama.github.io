@@ -94,6 +94,9 @@
 .ui-widget-header {
   background: #a7a7a7 !important;
 }
+.ui-slider .ui-slider-handle {
+  z-index: 1 !important;
+}
 .custom-select {
   position: relative;
   padding: 0 30px 0 0;
@@ -439,8 +442,7 @@ body {
       height: 100%;
       &--close {
         display: flex;
-        justify-content: flex-end;
-        padding: 38px 23px 0 0;
+        padding: 62px 0 0 64%;
       }
       &.active {
         display: block;
@@ -1802,8 +1804,11 @@ body {
       padding: 0 0 0 30px;
       display: flex;
       &__choose {
-        padding: 7px 14px;
+        padding: 7px 10px;
         border: 1px solid rgba(0, 0, 0, 0.1);
+        &.active {
+          background: #f4f4f4;
+        }
       }
       @include for-phone-only {
         flex-wrap: wrap;
@@ -1817,11 +1822,21 @@ body {
         box-sizing: border-box;
         border-radius: 3px;
         max-width: 70px;
-        padding: 7px 41px 7px 14px;
+        padding: 7px 15px 7px 14px;
       }
       @include for-phone-only {
         position: absolute;
         top: 68%;
+        right: 10%;
+      }
+      @media (max-width: 375px) {
+        position: absolute;
+        top: 58%;
+        right: 22%;
+      }
+      @media (max-width: 414px) {
+        position: absolute;
+        top: 61%;
         right: 10%;
       }
     }
@@ -1861,6 +1876,16 @@ body {
         position: absolute;
         top: 45%;
         right: 7%;
+      }
+      @media (max-width: 375px) {
+        position: absolute;
+        top: 39%;
+        right: 21%;
+      }
+      @media (max-width: 414px) {
+        position: absolute;
+        top: 35%;
+        right: 10%;
       }
       &-limit {
         display: flex;
@@ -1905,16 +1930,23 @@ body {
         @include for-phone-only {
           margin: 0 70px 10px 0;
         }
+        @media (max-width: 375px) {
+          margin: 0 120px 10px 0;
+        }
+        @media (max-width: 414px) {
+          margin: 0 160px 10px 0;
+        }
       }
     }
     &-all {
       margin: 0 30px 0 30px;
       @include for-phone-only {
-        margin: 20px 30px 0 0;
+        margin: 20px 181px 0 0;
       }
     }
     &-allFiltres {
       &__type-link {
+        margin: 8px 0px 0px 10px;
         @include for-phone-only {
           display: flex;
           align-items: center;
@@ -1937,7 +1969,7 @@ body {
       align-items: center;
       margin: 0 0 9px 30px;
       @include for-phone-only {
-        margin: 0 0 0 0;
+        margin: 0 122px 0 0;
       }
     }
     &-price {
@@ -2085,6 +2117,9 @@ body {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  &-metro {
+    background: #fff !important;
+  }
   &-checkbox {
     display: flex;
     justify-content: center;
@@ -2113,7 +2148,7 @@ body {
       margin-right: 0.2em;
       vertical-align: bottom;
       color: transparent;
-      background: #202020;
+      background: #fff;
       transition: 0.2s;
     }
 
@@ -2124,6 +2159,8 @@ body {
     & input[type="checkbox"]:checked + label:before {
       content: url("../images/yes.png");
       color: #fff;
+      background: #202020;
+
       padding: 0px 12px 17px 5px;
     }
 
@@ -2183,6 +2220,15 @@ body {
   width: 80%; /* Could be more or less, depending on screen size */
   max-width: 367px;
   background-position: -27% 26%;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    max-height: 283px;
+    flex-wrap: wrap;
+    @include for-desktop-up() {
+      max-height: 111px;
+    }
+  }
 }
 
 /* The Close Button */
@@ -2224,4 +2270,52 @@ body {
       }
     }
   }
+}
+input[type="checkbox"] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  border: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  padding: 0px 12px 17px 5px;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  background: #fff;
+  transition: 0.2s;
+}
+
+input[type="checkbox"] + label:active:before {
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: url("../images/yes.png");
+  color: #fff;
+  padding: 0px 12px 17px 5px;
+  background: #202020;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type="checkbox"]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
 }

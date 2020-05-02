@@ -160,7 +160,9 @@
             <div class="section-filters-content-place">
               <a class="section-filters-content-place__choose">Район</a>
               <div class="section-filters-content-place__separator"></div>
-              <a class="section-filters-content-place__choose">Метро</a>
+              <a class="section-filters-content-place__choose js-metro"
+                >Метро</a
+              >
             </div>
             <div class="section-filters-content-price">
               <input
@@ -308,12 +310,12 @@
                 <div id="slider-range"></div>
               </div>
               <div class="section-filters-content-type">
-                <a class="section-filters-content-type__choose">
+                <a class="section-filters-content-type__choose js-choose-type">
                   Торговое помщение</a
                 >
-                <a class="section-filters-content-type__choose">Земля</a>
-                <a class="section-filters-content-type__choose">Офис</a>
-                <a class="section-filters-content-type__choose"> Склад</a>
+                <a class="section-filters-content-type__choose js-choose-type">Земля</a>
+                <a class="section-filters-content-type__choose js-choose-type">Офис</a>
+                <a class="section-filters-content-type__choose js-choose-type"> Склад</a>
                 <a
                   class="js-close-filtres section-filters-content-allFiltres__type-link section-filters-content-allFiltres__link hidden"
                 >
@@ -686,6 +688,50 @@
         <div class="section-footer-footer"></div>
       </div>
     </section>
+    <div id="metroModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content modal-metro">
+        <span class="close">&times;</span>
+        <div class="modal-content__list">
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro1" name="fruit-1" value="Apple" />
+            <label for="metro1">Метро 1</label>
+          </div>
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro2" name="fruit-1" value="Apple" />
+            <label for="metro2">Метро 1</label>
+          </div>
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro3" name="fruit-1" value="Apple" />
+            <label for="metro3">Метро 1</label>
+          </div>
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro4" name="fruit-1" value="Apple" />
+            <label for="metro4">Метро 1</label>
+          </div>
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro5" name="fruit-1" value="Apple" />
+            <label for="metro5">Метро 1</label>
+          </div>
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro6" name="fruit-1" value="Apple" />
+            <label for="metro6">Метро 1</label>
+          </div>
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro7" name="fruit-1" value="Apple" />
+            <label for="metro7">Метро 1</label>
+          </div>
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro8" name="fruit-1" value="Apple" />
+            <label for="metro8">Метро 1</label>
+          </div>
+          <div class="modal-content__item">
+            <input type="checkbox" id="metro9" name="fruit-1" value="Apple" />
+            <label for="metro9">Метро 1</label>
+          </div>
+
+      </div>
+    </div>
     <script src="./js/libs/jquery/jquery.min.js"></script>
 
     <script src="./js/libs/jquery/jquery-ui.js"></script>

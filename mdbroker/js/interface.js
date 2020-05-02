@@ -37,10 +37,10 @@ $(".js-close-filtres").on("click", function () {
   $(".js-filtres").removeClass("hidden");
   $(".section-filters-content-show__btn--close-filtres").removeClass("hidden");
 });
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("metroModal");
 
 // Get the button that opens the modal
-var btn = document.querySelector(".js-request");
+var btn = document.querySelector(".js-metro");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -61,3 +61,6 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+$(".js-choose-type").on("click", function () {
+  $(this).toggleClass("active");
+});
