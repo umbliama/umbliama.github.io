@@ -138,6 +138,23 @@
     font-size: 14px;
   }
 }
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 body {
   background-color: #f8f8f8;
 }
@@ -429,6 +446,9 @@ body {
     }
     &-mobile-menu {
       visibility: hidden;
+      opacity: 0;
+      display: none;
+      animation: disappear 1s ease-out;
 
       @include for-tablet-portrait-up() {
         display: none;
@@ -439,7 +459,7 @@ body {
       background: #202020;
       position: absolute;
       z-index: 1000;
-      width: 100%;
+      width: 80%;
       transition: 0.5s all ease-in;
 
       transform: translateX(126%);
@@ -451,8 +471,12 @@ body {
       &.active {
         visibility: visible;
         transform: translateX(26%);
-        transition: 0.5s transform ease-in;
+        transition: 0.5s all ease-in;
         height: 100vh;
+        display: block;
+        animation: appear 0.3s ease-out;
+
+        opacity: 1;
       }
       &__list {
         padding: 10px 0 0 50px;

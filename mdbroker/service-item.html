@@ -23,11 +23,11 @@
             <span class="menu-global menu-bottom"></span>
           </div>
           <div class="section-header-content-mobile-menu">
-            <div
+            <!-- <div
               class="section-header-content-mobile-menu--close js-menu-close"
             >
               <img src="./images/close.png" alt="" />
-            </div>
+            </div> -->
             <div class="section-header-content-mobile-menu__list">
               <div class="section-header-content-mobile-menu__item">
                 <a
@@ -123,7 +123,7 @@
             <a class="section-header-typical-nav-phone__link" href="" type="tel"
               >+7 926 174-31-74</a
             >
-            <p class="section-header-typical-nav-phone__request">
+            <p class="section-header-typical-nav-phone__request js-request">
               Оставить заявку
             </p>
           </div>
@@ -168,7 +168,7 @@
               </div>
             </div>
             <div class="section-service-item-content-btn">
-              <a class="section-service-item-content-btn__btn"
+              <a class="section-service-item-content-btn__btn js-request"
                 >Оставить заявку</a
               >
             </div>
@@ -199,22 +199,34 @@
               </div>
             </div>
             <div class="section-footer-content-main-nav">
-              <a href="#" class="section-footer-content-main-nav__link"
+              <a
+                href="./rent.html"
+                class="section-footer-content-main-nav__link"
                 >аренда</a
               >
-              <a href="#" class="section-footer-content-main-nav__link"
+              <a
+                href="./rent.html"
+                class="section-footer-content-main-nav__link"
                 >покупка</a
               >
-              <a href="#" class="section-footer-content-main-nav__link"
+              <a
+                href="./services.html"
+                class="section-footer-content-main-nav__link"
                 >услуги</a
               >
-              <a href="#" class="section-footer-content-main-nav__link"
+              <a
+                href="./owners.html"
+                class="section-footer-content-main-nav__link"
                 >собственникам</a
               >
-              <a href="#" class="section-footer-content-main-nav__link"
+              <a
+                href="./about.html"
+                class="section-footer-content-main-nav__link"
                 >о компании</a
               >
-              <a href="#" class="section-footer-content-main-nav__link"
+              <a
+                href="./contacts.html"
+                class="section-footer-content-main-nav__link"
                 >контакты</a
               >
             </div>
@@ -226,7 +238,7 @@
                 >+7 926 174-31-74</a
               >
               <a
-                class="section-footer-content-main-contacts__btn btn btn-request"
+                class="section-footer-content-main-contacts__btn btn btn-request js-request"
                 >Оставить заявку
                 <div class="btn-request__triangle"></div
               ></a>
@@ -240,7 +252,41 @@
         <div class="section-footer-footer"></div>
       </div>
     </section>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-heading">
+          <h2 class="modal-heading__heading">Свяжитесь с нами</h2>
+        </div>
+        <div class="modal-input-group">
+          <label for="">Ваше имя</label>
+          <input
+            class="modal-input-group__input"
+            type="text"
+            placeholder="Как к вам обращаться?"
+          />
+        </div>
+        <div class="modal-input-group">
+          <label for="">Ваш телефон</label>
+          <input
+            class="modal-input-group__input"
+            type="text"
+            placeholder="+7 (___) ___-__-__"
+          />
+        </div>
+        <div class="modal-btn">
+          <a class="modal-btn__btn">Связаться со мной</a>
+        </div>
+        <div class="modal-checkbox">
+          <input type="checkbox" id="fruit1" name="fruit-1" value="Apple" />
+          <label for="fruit1">Я согласен с <a href="">условиями</a></label>
+        </div>
+      </div>
+    </div>
     <script src="./js/libs/jquery/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/interface.js"></script>
   </body>
 </html>
