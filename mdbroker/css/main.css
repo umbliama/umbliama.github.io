@@ -185,6 +185,9 @@ body {
   @media (max-width: 599px) {
     .default-heading {
       font-size: 28px; } }
+  @media (max-width: 599px) {
+    .default-heading-privacy {
+      font-size: 24px; } }
 
 .default-separator {
   margin: 0 20px 0 0;
@@ -197,6 +200,40 @@ body {
       width: 42px;
       height: 4px; } }
 
+.section-header-footer {
+  margin: 200px 0 0 0;
+  display: flex;
+  justify-content: flex-end; }
+  .section-header-footer-container {
+    display: flex;
+    align-items: baseline; }
+    .section-header-footer-container__heading {
+      color: #fbfbfb;
+      font-size: 40px;
+      font-family: "OpenSansSemiBold"; }
+    .section-header-footer-container__span {
+      font-size: 20px;
+      font-family: "OpenSansSemiBold";
+      color: rgba(255, 255, 255, 0.5);
+      margin: 0 0 0 10px; }
+    .section-header-footer-container-prevArrow {
+      background: url("../images/header-slider-arrow-next.png");
+      width: 21px;
+      transform: rotate(180deg);
+      height: 21px;
+      margin: 0 30px 0 0; }
+      .section-header-footer-container-prevArrow--inactive {
+        background: url("../images/header-slider-arrow-next-inactive.png");
+        transform: rotate(0); }
+    .section-header-footer-container-nextArrow {
+      background: url("../images/header-slider-arrow-next.png");
+      width: 21px;
+      margin: 0 0 0 30px;
+      height: 21px; }
+      .section-header-footer-container-nextArrow--inactive {
+        background: url("../images/header-slider-arrow-next-inactive.png");
+        transform: rotate(180deg); }
+
 .section-header-inner {
   max-width: 1140px;
   margin: 0 auto; }
@@ -208,9 +245,20 @@ body {
   align-items: flex-end;
   position: absolute;
   flex-direction: column; }
-  @media (min-width: 600px) {
-    .section-header__dots {
-      display: none; } }
+  .section-header__dots-line {
+    width: 1px;
+    height: 161px;
+    display: block;
+    position: absolute;
+    right: 50%;
+    top: 35%; }
+    .section-header__dots-line--bottom {
+      width: 1px;
+      height: 161px;
+      display: block;
+      position: absolute;
+      right: 50%;
+      top: 69%; }
   .section-header__dots-item {
     width: 6px;
     height: 6px;
@@ -541,10 +589,11 @@ body {
     clip-path: polygon(100% 0, 100% 79%, 88% 100%, 0 100%, 0 0); }
 
 .section-hot {
-  padding: 0 0 292px 0; }
+  padding: 0 0 292px 0;
+  background: #fff; }
   @media (min-width: 600px) {
     .section-hot {
-      padding: 0 0 200px 0; } }
+      padding: 100px 0 200px 0; } }
   .section-hot-outer .slick-track {
     padding: 0 0 30px 0; }
   .section-hot-outer-list {
@@ -708,11 +757,22 @@ body {
     width: 25px;
     height: 25px;
     background: url("../images/about-arrow-prev.png") no-repeat; }
+    .section-about-outer-list__dots-arrow-prevArrow--active {
+      background: url("../images/about-arrow-nexst.png") no-repeat;
+      width: 25px;
+      height: 25px;
+      transform: rotate(180deg); }
   .section-about-outer-list__dots-arrow-nextArrow {
     margin: 0 0 0 20px;
     width: 25px;
     height: 25px;
     background: url("../images/about-arrow-nexst.png") no-repeat; }
+    .section-about-outer-list__dots-arrow-nextArrow--inactive {
+      background: url("../images/about-arrow-prev.png") no-repeat;
+      transform: rotate(180deg);
+      margin: 0 20px 0 0;
+      width: 25px;
+      height: 25px; }
   .section-about-outer-list__dots-number--active {
     font-family: "OpenSansBold";
     font-size: 40px;
@@ -1613,7 +1673,42 @@ body {
   /* Black w/ opacity */ }
   .modal-checkbox {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    margin: 10px 0 0 0; }
+    .modal-checkbox input[type="checkbox"] + label {
+      display: block;
+      margin: 0.2em;
+      cursor: pointer;
+      padding: 0.2em; }
+    .modal-checkbox input[type="checkbox"] {
+      display: none; }
+    .modal-checkbox input[type="checkbox"] + label:before {
+      content: "";
+      border: 1px solid #e3e3e3;
+      box-sizing: border-box;
+      border-radius: 2px;
+      display: inline-block;
+      width: 20px;
+      height: 14px;
+      padding: 0px 12px 17px 5px;
+      margin-right: 0.2em;
+      vertical-align: bottom;
+      color: transparent;
+      background: #202020;
+      transition: 0.2s; }
+    .modal-checkbox input[type="checkbox"] + label:active:before {
+      transform: scale(0); }
+    .modal-checkbox input[type="checkbox"]:checked + label:before {
+      content: url("../images/yes.png");
+      color: #fff;
+      padding: 0px 12px 17px 5px; }
+    .modal-checkbox input[type="checkbox"]:disabled + label:before {
+      transform: scale(1);
+      border-color: #aaa; }
+    .modal-checkbox input[type="checkbox"]:checked:disabled + label:before {
+      transform: scale(1);
+      background-color: #bfb;
+      border-color: #bfb; }
   .modal-heading {
     padding: 0 0 40px 0; }
     .modal-heading__heading {
@@ -1621,9 +1716,12 @@ body {
       font-family: "OpenSansSemiBold";
       text-align: center; }
   .modal-input-group {
-    margin: 0 0 15px 0; }
+    margin: 0 21px 15px 0; }
     .modal-input-group__input {
-      padding: 7px 146px 7px 10px; }
+      padding: 8px 146px 7px 10px;
+      border: 1px solid #e3e3e3;
+      box-sizing: border-box;
+      border-radius: 3px; }
   .modal-btn {
     display: flex;
     margin: 30px 0 10px 0;
@@ -1642,14 +1740,15 @@ body {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background: url("../images/modal__bg.png");
+  background-color: #fff;
   margin: 15% auto;
   /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
   width: 80%;
   /* Could be more or less, depending on screen size */
-  max-width: 367px; }
+  max-width: 367px;
+  background-position: -27% 26%; }
 
 /* The Close Button */
 .close {
@@ -1663,3 +1762,20 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer; }
+
+.section-privacy {
+  margin: 0 0 50px 0; }
+  @media (max-width: 599px) {
+    .section-privacy .default-heading-container {
+      margin: 49px 0 30px; } }
+  .section-privacy-content {
+    padding: 0 16px 0; }
+    .section-privacy-content-point__heading {
+      font-size: 20px;
+      font-family: "OpenSansSemiBold"; }
+    .section-privacy-content-point__text {
+      font-family: "OpenSansRegular";
+      font-size: 16px; }
+    .section-privacy-content-point__item {
+      font-size: 16px;
+      font-family: "OpenSansRegular"; }

@@ -11,13 +11,19 @@ $(document).ready(function () {
       prevArrow: ".section-hot-outer-list__dots-arrow-prevArrow",
       nextArrow: $(".section-hot-outer-list__dots-arrow-nextArrow"),
       appendDots: $(".section-hot-outer-list__dots"),
-      slidesToShow: 3,
       responsive: [
         {
           breakpoint: 800,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 1921,
+          settings: {
+            slidesToShow: 3,
+            variableWidth: true,
           },
         },
       ],
@@ -40,15 +46,54 @@ $(document).ready(function () {
       prevArrow: $(".section-about-outer-list__dots-arrow-prevArrow"),
       nextArrow: $(".section-about-outer-list__dots-arrow-nextArrow"),
     });
-  }
 
+    $(".section-about-content-main").on("afterChange", function () {
+      console.log($(".section-about-content-main").slick("slickCurrentSlide"));
+      var currentSlide = $(".section-about-content-main").slick(
+        "slickCurrentSlide"
+      );
+      if (currentSlide > 0) {
+        $(".section-about-outer-list__dots-arrow-prevArrow").addClass(
+          "section-about-outer-list__dots-arrow-prevArrow--active"
+        );
+      } else if (currentSlide == 2) {
+        $(".section-about-outer-list__dots-arrow-nextArrow").addClass(
+          "section-about-outer-list__dots-arrow-nextArrow--inactive"
+        );
+        $(".section-about-outer-list__dots-arrow-prevArrow").addClass(
+          "section-about-outer-list__dots-arrow-prevArrow--inactive"
+        );
+      } else if (currentSlide == 0) {
+        $(".section-about-outer-list__dots-arrow-prevArrow").removeClass(
+          "section-about-outer-list__dots-arrow-prevArrow--active"
+        );
+      }
+      if (currentSlide > 0 && currentSlide < 2) {
+        $(".section-about-outer-list__dots-arrow-nextArrow").removeClass(
+          "section-about-outer-list__dots-arrow-nextArrow--inactive"
+        );
+      }
+    });
+  }
   $(".section-header-outer-background-cover").slick({
-    arrows: false,
+    arrows: true,
     dots: true,
+    infinite: false,
+    prevArrow: $(".section-header-footer-container-prevArrow"),
+    nextArrow: $(".section-header-footer-container-nextArrow"),
     customPaging: function (slider, i) {
       return "<span class='section-header__dots-item'></span>";
     },
     appendDots: $(".section-header__dots"),
+  });
+  $(".section-header-outer-background-cover").on("afterChange", function (
+    event,
+    slick,
+    currentSlide
+  ) {
+    $.each(slick.$dots, (i, el) => {
+      $(el).find("li").eq(currentSlide).addClass("slick-active").find("button");
+    });
   });
   var options = {
     index: 3,

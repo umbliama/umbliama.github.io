@@ -246,6 +246,11 @@ body {
   @include for-phone-only() {
     font-size: 28px;
   }
+  &-privacy {
+    @include for-phone-only {
+      font-size: 24px;
+    }
+  }
 }
 .default-separator {
   margin: 0 20px 0 0;
@@ -259,6 +264,47 @@ body {
   }
 }
 .section-header {
+  &-footer {
+    margin: 200px 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+    &-container {
+      display: flex;
+      align-items: baseline;
+      &__heading {
+        color: #fbfbfb;
+        font-size: 40px;
+        @include ossemibold();
+      }
+      &__span {
+        font-size: 20px;
+        @include ossemibold();
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0 0 0 10px;
+      }
+      &-prevArrow {
+        background: url("../images/header-slider-arrow-next.png");
+        width: 21px;
+        transform: rotate(180deg);
+        height: 21px;
+        margin: 0 30px 0 0;
+        &--inactive {
+          background: url("../images/header-slider-arrow-next-inactive.png");
+          transform: rotate(0);
+        }
+      }
+      &-nextArrow {
+        background: url("../images/header-slider-arrow-next.png");
+        width: 21px;
+        margin: 0 0 0 30px;
+        height: 21px;
+        &--inactive {
+          background: url("../images/header-slider-arrow-next-inactive.png");
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
   &-inner {
     max-width: 1140px;
     margin: 0 auto;
@@ -273,8 +319,21 @@ body {
     align-items: flex-end;
     position: absolute;
     flex-direction: column;
-    @include for-tablet-portrait-up() {
-      display: none;
+    &-line {
+      width: 1px;
+      height: 161px;
+      display: block;
+      position: absolute;
+      right: 50%;
+      top: 35%;
+      &--bottom {
+        width: 1px;
+        height: 161px;
+        display: block;
+        position: absolute;
+        right: 50%;
+        top: 69%;
+      }
     }
 
     &-item {
@@ -286,6 +345,7 @@ body {
     }
     & ul {
       list-style-type: none;
+
       & li {
         box-sizing: border-box;
         border-radius: 50%;
@@ -682,8 +742,9 @@ body {
 
 .section-hot {
   padding: 0 0 292px 0;
+  background: #fff;
   @include for-tablet-portrait-up() {
-    padding: 0 0 200px 0;
+    padding: 100px 0 200px 0;
   }
   &-outer {
     & .slick-track {
@@ -882,12 +943,25 @@ body {
             width: 25px;
             height: 25px;
             background: url("../images/about-arrow-prev.png") no-repeat;
+            &--active {
+              background: url("../images/about-arrow-nexst.png") no-repeat;
+              width: 25px;
+              height: 25px;
+              transform: rotate(180deg);
+            }
           }
           &-nextArrow {
             margin: 0 0 0 20px;
             width: 25px;
             height: 25px;
             background: url("../images/about-arrow-nexst.png") no-repeat;
+            &--inactive {
+              background: url("../images/about-arrow-prev.png") no-repeat;
+              transform: rotate(180deg);
+              margin: 0 20px 0 0;
+              width: 25px;
+              height: 25px;
+            }
           }
         }
         &-number {
@@ -2014,6 +2088,55 @@ body {
   &-checkbox {
     display: flex;
     justify-content: center;
+    margin: 10px 0 0 0;
+
+    & input[type="checkbox"] + label {
+      display: block;
+      margin: 0.2em;
+      cursor: pointer;
+      padding: 0.2em;
+    }
+
+    & input[type="checkbox"] {
+      display: none;
+    }
+
+    & input[type="checkbox"] + label:before {
+      content: "";
+      border: 1px solid #e3e3e3;
+      box-sizing: border-box;
+      border-radius: 2px;
+      display: inline-block;
+      width: 20px;
+      height: 14px;
+      padding: 0px 12px 17px 5px;
+      margin-right: 0.2em;
+      vertical-align: bottom;
+      color: transparent;
+      background: #202020;
+      transition: 0.2s;
+    }
+
+    & input[type="checkbox"] + label:active:before {
+      transform: scale(0);
+    }
+
+    & input[type="checkbox"]:checked + label:before {
+      content: url("../images/yes.png");
+      color: #fff;
+      padding: 0px 12px 17px 5px;
+    }
+
+    & input[type="checkbox"]:disabled + label:before {
+      transform: scale(1);
+      border-color: #aaa;
+    }
+
+    & input[type="checkbox"]:checked:disabled + label:before {
+      transform: scale(1);
+      background-color: #bfb;
+      border-color: #bfb;
+    }
   }
   &-heading {
     padding: 0 0 40px 0;
@@ -2024,9 +2147,12 @@ body {
     }
   }
   &-input-group {
-    margin: 0 0 15px 0;
+    margin: 0 21px 15px 0;
     &__input {
-      padding: 7px 146px 7px 10px;
+      padding: 8px 146px 7px 10px;
+      border: 1px solid #e3e3e3;
+      box-sizing: border-box;
+      border-radius: 3px;
     }
   }
   &-btn {
@@ -2050,12 +2176,13 @@ body {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background: url("../images/modal__bg.png");
+  background-color: #fff;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   max-width: 367px;
+  background-position: -27% 26%;
 }
 
 /* The Close Button */
@@ -2071,4 +2198,30 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.section-privacy {
+  margin: 0 0 50px 0;
+  @include for-phone-only {
+    .default-heading-container {
+      margin: 49px 0 30px;
+    }
+  }
+
+  &-content {
+    padding: 0 16px 0;
+    &-point {
+      &__heading {
+        font-size: 20px;
+        @include ossemibold();
+      }
+      &__text {
+        @include osregular();
+        font-size: 16px;
+      }
+      &__item {
+        font-size: 16px;
+        @include osregular();
+      }
+    }
+  }
 }
