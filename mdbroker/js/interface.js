@@ -1,11 +1,11 @@
 $(".js-menu").on("click", function () {
-  $(".section-header-content-mobile-menu").toggleClass("active");
-
+  // $(".section-header-content-mobile-menu").toggleClass("active");
+  $(this).next().toggleClass("active");
   $(this).toggleClass("active");
   if ($(this).hasClass("active")) {
-    $(".section-header-content").css("height", "100vh");
+    $(this).parent(".js-height").css("height", "100vh");
   } else {
-    $(".section-header-content").css("height", "100%");
+    $(this).parent(".js-height").css("height", "100%");
   }
 });
 $(".js-menu active").on("click", function () {

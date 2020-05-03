@@ -94,6 +94,11 @@ $(document).ready(function () {
     $.each(slick.$dots, (i, el) => {
       $(el).find("li").eq(currentSlide).addClass("slick-active").find("button");
     });
+    $(".js-menu").each(function () {
+      $(this).removeClass("active");
+      $(".section-header-content-mobile-menu").removeClass("active");
+      $(".section-header-content").css("height", "100%");
+    });
   });
   var options = {
     index: 3,

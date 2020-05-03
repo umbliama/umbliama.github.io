@@ -219,6 +219,18 @@ body {
   margin: 200px 0 0 0;
   display: flex;
   justify-content: flex-end; }
+  @media (max-height: 650px) {
+    .section-header-footer {
+      margin: 138px 10px 0 0; } }
+  @media (max-height: 550px) {
+    .section-header-footer {
+      margin: 100px 10px 0 0; } }
+  @media (max-width: 1366px) and (max-width: 1920px) {
+    .section-header-footer {
+      margin: 0 110px 0 0; } }
+  @media (max-width: 1200px) {
+    .section-header-footer {
+      margin: 0 40px 0 0; } }
   .section-header-footer-container {
     display: flex;
     align-items: baseline; }
@@ -498,16 +510,25 @@ body {
         height: 80vh !important; } }
     @media (min-width: 900px) {
       .section-header-outer-slide {
-        height: 62vh !important; } }
+        height: 75vh !important; } }
     @media (min-width: 1200px) {
       .section-header-outer-slide {
         height: 82vh !important; } }
     .section-header-outer-slide--1 {
       background: url("../images/banner1.png") no-repeat; }
+      @media (max-width: 1900px) and (min-width: 1024px) {
+        .section-header-outer-slide--1 {
+          background-size: cover; } }
     .section-header-outer-slide--2 {
       background: url("../images/banner2.png") no-repeat; }
+      @media (max-width: 1900px) and (min-width: 1024px) {
+        .section-header-outer-slide--2 {
+          background-size: cover; } }
     .section-header-outer-slide--3 {
       background: url("../images/banner3.png") no-repeat; }
+      @media (max-width: 1900px) and (min-width: 1024px) {
+        .section-header-outer-slide--3 {
+          background-size: cover; } }
 
 .section-header-typical {
   max-height: 77px; }
@@ -531,19 +552,35 @@ body {
     @media (max-width: 599px) {
       .section-header-typical-nav {
         display: none; } }
+    @media (max-width: 768px) {
+      .section-header-typical-nav {
+        display: none; } }
     .section-header-typical-nav__list {
       display: flex; }
     .section-header-typical-nav__item {
       margin: 0 35px 0 0;
       list-style-type: none; }
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        .section-header-typical-nav__item {
+          margin: 0 11px 0 0; } }
     .section-header-typical-nav__link {
       text-decoration: none;
       font-size: 16px;
       text-transform: uppercase;
       color: #fbfbfb; }
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        .section-header-typical-nav__link {
+          margin: 0 12px 0 0;
+          font-size: 15 px; } }
     .section-header-typical-nav-phone {
       margin: 22px 0 0 0; }
       @media (max-width: 599px) {
+        .section-header-typical-nav-phone {
+          display: none; } }
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        .section-header-typical-nav-phone {
+          font-size: 16px; } }
+      @media (max-width: 768px) {
         .section-header-typical-nav-phone {
           display: none; } }
       .section-header-typical-nav-phone__link {
@@ -642,7 +679,18 @@ body {
   background: #fff; }
   @media (min-width: 600px) {
     .section-hot {
-      padding: 100px 0 200px 0; } }
+      padding: 1px 0 100px 0; } }
+  .section-hot-check-all {
+    display: flex;
+    margin: 10px 0 0 183px;
+    align-items: center; }
+    .section-hot-check-all__link {
+      font-size: 18px;
+      text-decoration: none;
+      color: #000;
+      font-family: "OpenSansRegular"; }
+    .section-hot-check-all__img {
+      margin: 0 0 0 10px; }
   .section-hot-outer .slick-track {
     padding: 0 0 30px 0; }
   .section-hot-outer-list {
@@ -1027,11 +1075,21 @@ body {
       .section-team-content-list {
         flex-direction: column;
         align-items: center; } }
+    @media (min-width: 900px) {
+      .section-team-content-list {
+        flex-wrap: wrap; } }
+    @media (max-width: 768px) {
+      .section-team-content-list {
+        flex-wrap: wrap; } }
     .section-team-content-list-member {
       margin: 0 20px 0 0; }
       @media (max-width: 599px) {
         .section-team-content-list-member {
           margin: 20px 0 0 0; } }
+      @media (min-width: 900px) {
+        .section-team-content-list-member {
+          flex: 0 32%;
+          justify-content: center; } }
       .section-team-content-list-member-photo {
         display: flex;
         flex-direction: column;

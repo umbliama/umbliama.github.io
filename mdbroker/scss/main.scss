@@ -286,6 +286,18 @@ body {
 .section-header {
   &-footer {
     margin: 200px 0 0 0;
+    @media (max-height: 650px) {
+      margin: 138px 10px 0 0;
+    }
+    @media (max-height: 550px) {
+      margin: 100px 10px 0 0;
+    }
+    @media (max-width: 1366px) and (max-width: 1920px) {
+      margin: 0 110px 0 0;
+    }
+    @media (max-width: 1200px) {
+      margin: 0 40px 0 0;
+    }
     display: flex;
     justify-content: flex-end;
     &-container {
@@ -464,6 +476,7 @@ body {
 
       transform: translateX(126%);
       height: 100%;
+
       &--close {
         display: flex;
         padding: 62px 0 0 64%;
@@ -626,19 +639,28 @@ body {
         height: 80vh !important;
       }
       @include for-tablet-landscape-up() {
-        height: 62vh !important;
+        height: 75vh !important;
       }
       @include for-desktop-up() {
         height: 82vh !important;
       }
       &--1 {
         background: url("../images/banner1.png") no-repeat;
+        @media (max-width: 1900px) and (min-width: 1024px) {
+          background-size: cover;
+        }
       }
       &--2 {
         background: url("../images/banner2.png") no-repeat;
+        @media (max-width: 1900px) and (min-width: 1024px) {
+          background-size: cover;
+        }
       }
       &--3 {
         background: url("../images/banner3.png") no-repeat;
+        @media (max-width: 1900px) and (min-width: 1024px) {
+          background-size: cover;
+        }
       }
     }
   }
@@ -671,6 +693,10 @@ body {
     @include for-phone-only() {
       display: none;
     }
+    @media (max-width: 768px) {
+      display: none;
+    }
+
     margin: 25px 0 0 0;
     &__list {
       display: flex;
@@ -678,17 +704,31 @@ body {
     &__item {
       margin: 0 35px 0 0;
       list-style-type: none;
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        margin: 0 11px 0 0;
+      }
     }
     &__link {
       text-decoration: none;
       font-size: 16px;
       text-transform: uppercase;
       color: #fbfbfb;
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        margin: 0 12px 0 0;
+        font-size: 15 px;
+      }
     }
     &-phone {
       @include for-phone-only() {
         display: none;
       }
+      @media (min-width: 1024px) and (max-width: 1366px) {
+        font-size: 16px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+
       margin: 22px 0 0 0;
       &__link {
         color: #fbfbfb;
@@ -808,7 +848,22 @@ body {
   padding: 0 0 292px 0;
   background: #fff;
   @include for-tablet-portrait-up() {
-    padding: 100px 0 200px 0;
+    padding: 1px 0 100px 0;
+  }
+  &-check-all {
+    display: flex;
+    margin: 10px 0 0 183px;
+    align-items: center;
+
+    &__link {
+      font-size: 18px;
+      text-decoration: none;
+      color: #000;
+      @include osregular();
+    }
+    &__img {
+      margin: 0 0 0 10px;
+    }
   }
   &-outer {
     & .slick-track {
@@ -1283,11 +1338,20 @@ body {
         flex-direction: column;
         align-items: center;
       }
-
+      @include for-tablet-landscape-up {
+        flex-wrap: wrap;
+      }
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+      }
       &-member {
         margin: 0 20px 0 0;
         @include for-phone-only() {
           margin: 20px 0 0 0;
+        }
+        @include for-tablet-landscape-up {
+          flex: 0 32%;
+          justify-content: center;
         }
         &-photo {
           display: flex;
